@@ -12,8 +12,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'pwa-192x192.png', 'pwa-512x512.png', 'gym-icon.svg'],
       manifest: {
-        name: 'Kinetiq Gym Companion',
-        short_name: 'Kinetiq',
+        name: 'RepQuest Gym Companion',
+        short_name: 'RepQuest',
         description: 'Personalized Gym Companion & 8-Week Recomposition Guide for Anytime Fitness',
         theme_color: '#0f172a',
         background_color: '#090d16',

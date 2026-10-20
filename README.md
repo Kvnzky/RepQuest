@@ -1,17 +1,19 @@
-# Kinetiq — Personalized Gym Companion & 8-Week Recomposition Engine
+# RepQuest — Personalized Gym Companion & 8-Week Recomposition Engine
 
-> **A high-performance, offline-first Progressive Web App (PWA) tailored for Anytime Fitness workouts, progressive machine training, set logging, rest timing, body recomposition metrics, and nutrition tracking.**
+> **A high-performance, 100% offline-first Progressive Web App (PWA) tailored for Anytime Fitness workouts, progressive machine training, real offline video reels, set logging, rest timing, body recomposition metrics, and nutrition tracking.**
+>
+> **GitHub Repository:** [https://github.com/Kvnzky/RepQuest](https://github.com/Kvnzky/RepQuest)
 
 ---
 
 ## 1. App Name & Branding Rationale
 
 ### Five Curated Name Candidates
-1. **Kinetiq** *(Recommended & Default)* — Derived from *kinetic* (the energy of bodily motion) and *intelligent tracking*. Short, memorable, modern, and focused on biomechanical progression and precision.
-2. **FormaFit** — Emphasizes posture, machine ergonomics, and movement execution.
-3. **PulseRecomp** — Direct focus on body recomposition and steady rhythm.
-4. **IronPace** — Evokes measured, unhurried strength progression with steady overload.
-5. **AuraGym** — Modern, mindful personal pocket companion.
+1. **RepQuest** *(Recommended & Default)* — Frames every workout, machine set, and rep as an engaging personal quest toward disciplined body recomposition, abdominal fat reduction, and muscle preservation.
+2. **Kinetiq** — Derived from *kinetic* (bodily motion) and *intelligent tracking*. Modern and high-performance.
+3. **FormaFit** — Emphasizes posture, machine ergonomics, and movement execution.
+4. **PulseRecomp** — Direct focus on body recomposition and steady rhythm.
+5. **IronPace** — Evokes measured, unhurried strength progression with steady overload.
 
 ### Branding Architecture
 All branding parameters (app name, short name, tagline, subtitle, theme, and accent colors) are managed centrally in `src/config/branding.ts` and stored in IndexedDB. Users can switch name suggestions or define a custom name directly within **Settings** without touching multiple files.

@@ -81,7 +81,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
       const a = document.createElement('a')
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-')
       a.href = url
-      a.download = `kinetiq-gym-backup-${timestamp}.json`
+      a.download = `repquest-gym-backup-${timestamp}.json`
       document.body.appendChild(a)
       a.click()
       document.body.removeChild(a)
@@ -161,7 +161,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-bold text-white">{sug.name}</span>
-                      {sug.name === 'Kinetiq' && (
+                      {sug.name === 'RepQuest' && (
                         <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-sky-500/20 text-sky-400 border border-sky-500/40">
                           Recommended
                         </span>

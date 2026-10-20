@@ -313,9 +313,9 @@ export function App() {
     return (
       <div className="min-h-screen bg-[#090d16] flex flex-col items-center justify-center text-slate-400 p-6 text-center">
         <div className="w-12 h-12 rounded-2xl bg-sky-500/20 border border-sky-500/40 animate-pulse flex items-center justify-center mb-4">
-          <span className="text-sky-400 text-lg font-black">K</span>
+          <span className="text-sky-400 text-lg font-black">R</span>
         </div>
-        <h2 className="text-base font-bold text-white tracking-tight">Kinetiq Gym Companion</h2>
+        <h2 className="text-base font-bold text-white tracking-tight">RepQuest Gym Companion</h2>
         <p className="text-xs text-slate-500 mt-1">Initializing offline storage...</p>
       </div>
     )
@@ -325,7 +325,7 @@ export function App() {
     <div className="min-h-screen bg-[#090d16] text-slate-100 flex flex-col font-sans selection:bg-sky-500 selection:text-slate-950">
       {/* Top Header */}
       <Header
-        appName={appSettings.appName || 'Kinetiq'}
+        appName={appSettings.appName || 'RepQuest'}
         currentWeek={currentWeek}
         hasActiveWorkout={Boolean(activeSession)}
         onResumeWorkout={handleResumeWorkout}

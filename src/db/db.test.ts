@@ -21,7 +21,7 @@ describe('Data Models and Defaults', () => {
   })
 
   it('has preconfigured app settings and defaults', () => {
-    expect(DEFAULT_APP_SETTINGS.appName).toBe('Kinetiq')
+    expect(DEFAULT_APP_SETTINGS.appName).toBe('RepQuest')
     expect(DEFAULT_APP_SETTINGS.dailyProteinTargetG).toBe(140)
     expect(DEFAULT_APP_SETTINGS.dailyWaterTargetMl).toBe(3000)
     expect(DEFAULT_APP_SETTINGS.dailyStepTarget).toBe(6000)

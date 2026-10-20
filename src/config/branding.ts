@@ -9,6 +9,11 @@ export interface BrandingConfig {
 
 export const NAME_SUGGESTIONS = [
   {
+    name: 'RepQuest',
+    tagline: 'Your Personal Gym Quest & Recomposition Companion',
+    description: 'Frames every workout and rep as a milestone quest toward body recomposition and steady progression.'
+  },
+  {
     name: 'Kinetiq',
     tagline: 'Precision Gym Companion & Recomposition Engine',
     description: 'Blends kinetic motion with intelligent tracking. Modern, high-performance, and memorable.'
@@ -27,17 +32,12 @@ export const NAME_SUGGESTIONS = [
     name: 'IronPace',
     tagline: 'Disciplined Progression for Anytime Fitness',
     description: 'Evokes structured, unhurried strength development with steady progressive overload.'
-  },
-  {
-    name: 'AuraGym',
-    tagline: 'Distraction-Free Pocket Training Coach',
-    description: 'Clean, personal, and focused on wellness and restorative fitness.'
   }
 ] as const
 
 export const DEFAULT_BRANDING: BrandingConfig = {
-  appName: 'Kinetiq',
-  shortName: 'Kinetiq',
+  appName: 'RepQuest',
+  shortName: 'RepQuest',
   tagline: 'Personal Gym Companion',
   subtitle: 'Anytime Fitness 8-Week Recomposition & Progression Engine',
   accentColor: '#38bdf8', // Vibrant Sky / Cyan
