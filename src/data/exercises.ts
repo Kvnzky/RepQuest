@@ -40,6 +40,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: [
       'Never allow the handles to overstretch your shoulders behind the torso plane if you feel anterior shoulder strain.'
     ],
+    media: {
+      diagramType: 'mach-chest-press',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/xUm0AK83Uno',
+      externalUrl: 'https://www.youtube.com/watch?v=xUm0AK83Uno',
+      videoTitle: 'How To Use The Chest Press Machine (Proper Form)',
+      videoChannel: 'Anytime Fitness & Form Guide',
+      videoNote: 'Focus on 0:25: Adjust seat height so handles line up with mid-chest.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-incline-chest-press', 'cable-pallof-press'],
     tags: ['upper', 'chest', 'compound', 'machine']
   },
@@ -77,6 +86,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: [
       'Stop pressing before the elbows aggressively lock out.'
     ],
+    media: {
+      diagramType: 'mach-incline-chest-press',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/8iPEnn-ltC8',
+      externalUrl: 'https://www.youtube.com/watch?v=8iPEnn-ltC8',
+      videoTitle: 'Incline Chest Press Machine Form Demonstration',
+      videoChannel: 'Renaissance Periodization',
+      videoNote: 'Notice the elbow tuck at 45 degrees to optimize upper chest fiber alignment.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-chest-press'],
     tags: ['upper', 'chest', 'compound', 'machine']
   },
@@ -115,6 +133,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: [
       'Maintain an upright spine; never round lumbar spine under load.'
     ],
+    media: {
+      diagramType: 'mach-seated-row',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/GZbfZ033f74',
+      externalUrl: 'https://www.youtube.com/watch?v=GZbfZ033f74',
+      videoTitle: 'How To Seated Cable / Machine Row Correctly',
+      videoChannel: 'ScottHermanFitness',
+      videoNote: 'Watch 0:40: Drive elbows behind ribs without swinging torso.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-chest-supported-row', 'mach-lat-pulldown'],
     tags: ['upper', 'back', 'compound', 'machine']
   },
@@ -145,6 +172,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     commonMistakes: ['Lifting chest off pad to cheat reps.'],
     beginnerModifications: ['Focus on slow controlled 3-second negative.'],
     safetyNotes: ['Pad protects lower back; keep torso glued to pad.'],
+    media: {
+      diagramType: 'mach-chest-supported-row',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/0UBRfiO4zDs',
+      externalUrl: 'https://www.youtube.com/watch?v=0UBRfiO4zDs',
+      videoTitle: 'Chest-Supported Machine Row Technique',
+      videoChannel: 'Buff Dudes',
+      videoNote: 'Chest support removes lower back stress completely.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-seated-row', 'mach-lat-pulldown'],
     tags: ['upper', 'back', 'machine']
   },
@@ -181,6 +217,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
       'Use neutral-grip MAG or V-bar attachment if shoulder external rotation is tight.'
     ],
     safetyNotes: ['Always pull strictly to front of chest.'],
+    media: {
+      diagramType: 'mach-lat-pulldown',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/CAwf7n6Luuc',
+      externalUrl: 'https://www.youtube.com/watch?v=CAwf7n6Luuc',
+      videoTitle: 'Lat Pulldown Setup & Execution (Stop Making These Mistakes)',
+      videoChannel: 'Athlean-X',
+      videoNote: 'Watch 1:15: Pulling elbows to hips activates wide lats without swinging.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-neutral-lat-pulldown', 'mach-assisted-pullup'],
     tags: ['upper', 'back', 'cable']
   },
@@ -212,6 +257,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     commonMistakes: ['Pulling elbows too far behind back losing lat tension.'],
     beginnerModifications: ['Very joint-friendly grip for shoulders and wrists.'],
     safetyNotes: ['Maintain neutral spine without violent jerking.'],
+    media: {
+      diagramType: 'mach-neutral-lat-pulldown',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/7p8_Xw85v2s',
+      externalUrl: 'https://www.youtube.com/watch?v=7p8_Xw85v2s',
+      videoTitle: 'Neutral Grip Lat Pulldown Guide',
+      videoChannel: 'Renaissance Periodization',
+      videoNote: 'Neutral palms protect shoulder joints and emphasize mid-back fibers.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-lat-pulldown', 'mach-seated-row'],
     tags: ['upper', 'back', 'cable']
   },
@@ -237,11 +291,20 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     recommendedRepsMin: 8,
     recommendedRepsMax: 10,
     recommendedRestSec: 90,
-    defaultWeightKg: 35, // counterbalance
+    defaultWeightKg: 35,
     weightIncrementKg: 2.5,
     commonMistakes: ['Dropping down abruptly.'],
     beginnerModifications: ['Use more counterbalance weight until 10 smooth reps are achieved.'],
     safetyNotes: ['Step off slowly; let pad rise completely before releasing grips.'],
+    media: {
+      diagramType: 'mach-assisted-pullup',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/y3YvBzQ0nU8',
+      externalUrl: 'https://www.youtube.com/watch?v=y3YvBzQ0nU8',
+      videoTitle: 'How To Use The Assisted Pull-Up Machine at Anytime Fitness',
+      videoChannel: 'Anytime Fitness Tutorials',
+      videoNote: 'Step-by-step pad safety release and foot mounting technique.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-lat-pulldown'],
     tags: ['upper', 'back', 'machine']
   },
@@ -278,6 +341,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
       'Use neutral parallel handles to decrease anterior shoulder capsule pressure.'
     ],
     safetyNotes: ['Never press behind neck; always in scapular plane.'],
+    media: {
+      diagramType: 'mach-shoulder-press',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/WvLMauqrnK8',
+      externalUrl: 'https://www.youtube.com/watch?v=WvLMauqrnK8',
+      videoTitle: 'Seated Machine Shoulder Press Tutorial',
+      videoChannel: 'ScottHermanFitness',
+      videoNote: 'Watch 0:35: Maintain natural lumbar arch without hyperextension.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-lateral-raise'],
     tags: ['upper', 'shoulders', 'compound', 'machine']
   },
@@ -311,6 +383,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     beginnerModifications: ['Keep weights light; side delts respond best to strict form and higher reps.'],
     safetyNotes: ['Stop at 90-degree shoulder abduction.'],
+    media: {
+      diagramType: 'mach-lateral-raise',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/3VcKaXpzqRo',
+      externalUrl: 'https://www.youtube.com/watch?v=3VcKaXpzqRo',
+      videoTitle: 'Machine Lateral Raise Form (Capped Deltoids)',
+      videoChannel: 'Renaissance Periodization',
+      videoNote: 'Keep elbows leading the motion, stop at 90-degree parallel height.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['cable-lateral-raise', 'mach-shoulder-press'],
     tags: ['upper', 'shoulders', 'isolation', 'machine']
   },
@@ -344,6 +425,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     beginnerModifications: ['Keep arm bend stationary throughout entire movement.'],
     safetyNotes: ['Avoid excessive hyper-extension behind the back plane.'],
+    media: {
+      diagramType: 'mach-reverse-pec-deck',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/y42gL8q5pS8',
+      externalUrl: 'https://www.youtube.com/watch?v=y42gL8q5pS8',
+      videoTitle: 'Reverse Pec Deck Rear Deltoid Fly Setup',
+      videoChannel: 'Athlean-X',
+      videoNote: 'Keep wrists straight and lead with rear delts in wide horizontal arc.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-seated-row'],
     tags: ['upper', 'shoulders', 'rear-delts', 'machine']
   },
@@ -377,7 +467,16 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     beginnerModifications: ['Use lighter load with strict 3-second negative.'],
     safetyNotes: ['Do not hyperextend elbows violently at bottom of preacher pad.'],
-    alternativeExerciseIds: ['cable-biceps-curl'],
+    media: {
+      diagramType: 'mach-biceps-curl',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/jaAV-rD45I0',
+      externalUrl: 'https://www.youtube.com/watch?v=jaAV-rD45I0',
+      videoTitle: 'Machine Preacher Bicep Curl Form',
+      videoChannel: 'ScottHermanFitness',
+      videoNote: 'Keep triceps and armpits glued to pad; avoid leaning back.',
+      isExternal: true
+    },
+    alternativeExerciseIds: ['cable-triceps-pushdown'],
     tags: ['upper', 'arms', 'isolation', 'machine']
   },
   {
@@ -410,6 +509,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     beginnerModifications: ['Use straight bar if wrist control with rope is fatiguing.'],
     safetyNotes: ['Keep elbows glued to sides; do not let elbows flare wide.'],
+    media: {
+      diagramType: 'cable-triceps-pushdown',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/2-LAMcpzODU',
+      externalUrl: 'https://www.youtube.com/watch?v=2-LAMcpzODU',
+      videoTitle: 'Tricep Rope Pushdown Form Guide',
+      videoChannel: 'Buff Dudes',
+      videoNote: 'Upper arms locked into ribcage; only forearms hinge down.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-chest-press'],
     tags: ['upper', 'arms', 'isolation', 'cable']
   },
@@ -452,6 +560,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: [
       'NEVER lock knees out fully. Always keep hands on side grips and keep safety pins in reach.'
     ],
+    media: {
+      diagramType: 'mach-leg-press',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/IZxyjW7MPJQ',
+      externalUrl: 'https://www.youtube.com/watch?v=IZxyjW7MPJQ',
+      videoTitle: 'How to Leg Press Properly (Avoid Knee Lockout)',
+      videoChannel: 'Squat University',
+      videoNote: 'Watch 0:45: Stop 2 inches before knee lockout to keep constant tension on quads.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-hack-squat'],
     tags: ['lower', 'legs', 'compound', 'machine']
   },
@@ -486,6 +603,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     beginnerModifications: ['Place feet slightly higher on platform to ease knee flexion load.'],
     safetyNotes: ['Ensure safety catch pins are adjusted to catch carriage if needed.'],
+    media: {
+      diagramType: 'mach-hack-squat',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/0tn5K9NlCfo',
+      externalUrl: 'https://www.youtube.com/watch?v=0tn5K9NlCfo',
+      videoTitle: 'Hack Squat Technique & Foot Placement',
+      videoChannel: 'Renaissance Periodization',
+      videoNote: 'Keep heels anchored; push knees in line with toes.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-leg-press'],
     tags: ['lower', 'legs', 'compound', 'machine']
   },
@@ -523,6 +649,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
       'Seated position creates better stretch than lying leg curl; start conservative.'
     ],
     safetyNotes: ['Ensure knee is aligned with red pivot marker on machine.'],
+    media: {
+      diagramType: 'mach-seated-leg-curl',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/ELOCsoDSmrg',
+      externalUrl: 'https://www.youtube.com/watch?v=ELOCsoDSmrg',
+      videoTitle: 'Seated Leg Curl Machine Setup (Hamstring Isolation)',
+      videoChannel: 'ScottHermanFitness',
+      videoNote: 'Lap pad locked firmly prevents hips from lifting, keeping tension strictly on hamstrings.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-leg-extension'],
     tags: ['lower', 'hamstrings', 'isolation', 'machine']
   },
@@ -558,6 +693,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
       'Keep movement tempo controlled (2s up, 1s pause, 2s down).'
     ],
     safetyNotes: ['Avoid heavy 1-5 rep maximum attempts on leg extensions.'],
+    media: {
+      diagramType: 'mach-leg-extension',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/YyvSfVjQeL0',
+      externalUrl: 'https://www.youtube.com/watch?v=YyvSfVjQeL0',
+      videoTitle: 'Leg Extension Machine Masterclass',
+      videoChannel: 'Renaissance Periodization',
+      videoNote: 'Controlled 2-second negative prevents patellar tendon stress.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-leg-press'],
     tags: ['lower', 'quads', 'isolation', 'machine']
   },
@@ -592,6 +736,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     beginnerModifications: ['Substitute with bodyweight glute bridge if machine is busy.'],
     safetyNotes: ['Keep chin tucked slightly forward toward chest during entire thrust.'],
+    media: {
+      diagramType: 'mach-glute-drive',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/5X9_10uK5G4',
+      externalUrl: 'https://www.youtube.com/watch?v=5X9_10uK5G4',
+      videoTitle: 'How to Use Glute Drive / Hip Thrust Machine',
+      videoChannel: 'Anytime Fitness Tutorials',
+      videoNote: 'Tuck chin and squeeze glutes hard at top without hyperextending lower back.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['bw-glute-bridge'],
     tags: ['lower', 'glutes', 'compound', 'machine']
   },
@@ -622,6 +775,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     commonMistakes: ['Arching lower back off floor prematurely.'],
     beginnerModifications: ['Hold top contraction for 3 seconds per rep.'],
     safetyNotes: ['Joint friendly; zero spinal compression.'],
+    media: {
+      diagramType: 'bw-glute-bridge',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/OUgsJ8-Vi0E',
+      externalUrl: 'https://www.youtube.com/watch?v=OUgsJ8-Vi0E',
+      videoTitle: 'Glute Bridge Technique & Muscle Activation',
+      videoChannel: 'Squat University',
+      videoNote: 'Focus on posterior pelvic tilt and direct glute activation.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-glute-drive'],
     tags: ['lower', 'glutes', 'mat', 'bodyweight']
   },
@@ -656,6 +818,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     beginnerModifications: ['Emphasize the 2-second pause at the bottom stretch.'],
     safetyNotes: ['Keep balls of feet securely centered on edge to prevent slipping.'],
+    media: {
+      diagramType: 'mach-calf-raise',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/YMmgqO8Jo-k',
+      externalUrl: 'https://www.youtube.com/watch?v=YMmgqO8Jo-k',
+      videoTitle: 'Calf Raise Form: Stop Bouncing & Build Calves',
+      videoChannel: 'Renaissance Periodization',
+      videoNote: '2-second deep pause at bottom stretch eliminates tendon bounce.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-leg-press'],
     tags: ['lower', 'calves', 'isolation', 'machine']
   },
@@ -690,6 +861,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     beginnerModifications: ['Use moderate weight; remember spot reduction of belly fat is a myth.'],
     safetyNotes: ['Do not yank neck forward.'],
+    media: {
+      diagramType: 'mach-ab-crunch',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/4m240_uQk1g',
+      externalUrl: 'https://www.youtube.com/watch?v=4m240_uQk1g',
+      videoTitle: 'Abdominal Crunch Machine Technique',
+      videoChannel: 'ScottHermanFitness',
+      videoNote: 'Curl spine into flexion using abs; do not pull with forearms.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['cable-pallof-press'],
     tags: ['core', 'abs', 'machine']
   },
@@ -728,6 +908,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
       'Widen foot stance for greater base of support if balance is challenged.'
     ],
     safetyNotes: ['Brace abs as if about to be tapped on stomach.'],
+    media: {
+      diagramType: 'cable-pallof-press',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/AH_QZLM_0-s',
+      externalUrl: 'https://www.youtube.com/watch?v=AH_QZLM_0-s',
+      videoTitle: 'Cable Pallof Press (Anti-Rotation Core Stability)',
+      videoChannel: 'Squat University',
+      videoNote: 'Resist rotational twist; hold locked arms forward for 2 seconds.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-ab-crunch'],
     tags: ['core', 'obliques', 'anti-rotation', 'cable']
   },
@@ -753,13 +942,22 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     breathingCues: 'Breathe rhythmically through nose and mouth.',
     recommendedSets: 1,
     recommendedRepsMin: 20,
-    recommendedRepsMax: 30, // in minutes
+    recommendedRepsMax: 30,
     recommendedRestSec: 0,
     defaultWeightKg: 0,
     weightIncrementKg: 0,
     commonMistakes: ['Holding onto handrails tightly and leaning backward.'],
     beginnerModifications: ['Start flat at 0% incline if shin splints occur.'],
     safetyNotes: ['Attach safety emergency clip to clothing.'],
+    media: {
+      diagramType: 'cardio-treadmill',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/bK3h0n76f7k',
+      externalUrl: 'https://www.youtube.com/watch?v=bK3h0n76f7k',
+      videoTitle: 'Incline Treadmill Walking for Fat Loss & Heart Health',
+      videoChannel: 'Anytime Fitness Cardio Guide',
+      videoNote: 'Walk upright with natural arm swing; avoid clinging to front handrails.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['cardio-bike'],
     tags: ['cardio', 'aerobic', 'recovery', 'treadmill']
   },
@@ -788,6 +986,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     commonMistakes: ['Seat too low causing front knee compression.'],
     beginnerModifications: ['Use recumbent bike if lower back prefers back support.'],
     safetyNotes: ['Great zero-impact alternative to treadmill.'],
+    media: {
+      diagramType: 'cardio-bike',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/z0q6Z9XGk6U',
+      externalUrl: 'https://www.youtube.com/watch?v=z0q6Z9XGk6U',
+      videoTitle: 'Stationary Bike Setup & Cadence Guide',
+      videoChannel: 'Anytime Fitness Cardio Guide',
+      videoNote: 'Proper seat height ensures knees do not hyperextend or cramp.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['cardio-treadmill'],
     tags: ['cardio', 'aerobic', 'recovery', 'bike']
   },
@@ -810,13 +1017,22 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     breathingCues: 'Deep calm belly breaths; exhale to relax into stretch.',
     recommendedSets: 2,
     recommendedRepsMin: 30,
-    recommendedRepsMax: 45, // seconds
+    recommendedRepsMax: 45,
     recommendedRestSec: 15,
     defaultWeightKg: 0,
     weightIncrementKg: 0,
     commonMistakes: ['Aggressively forcing the knee down.'],
     beginnerModifications: ['Place hands behind you on floor for support.'],
     safetyNotes: ['No pinching sensations in groin; back off if sharp pinch occurs.'],
+    media: {
+      diagramType: 'mobility-hips',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/Zk_zQe6f3w8',
+      externalUrl: 'https://www.youtube.com/watch?v=Zk_zQe6f3w8',
+      videoTitle: '90/90 Hip Mobility Drill for Tight Hips',
+      videoChannel: 'Squat University',
+      videoNote: 'Gently hinge forward over front thigh with upright spine.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mobility-spine'],
     tags: ['mobility', 'hips', 'recovery']
   },
@@ -846,6 +1062,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     commonMistakes: ['Heel popping off floor.'],
     beginnerModifications: ['Move foot closer to wall if heel lifts.'],
     safetyNotes: ['Gentle stretch at back of lower leg, no joint impingement.'],
+    media: {
+      diagramType: 'mobility-ankles',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/IikP_TEEClk',
+      externalUrl: 'https://www.youtube.com/watch?v=IikP_TEEClk',
+      videoTitle: 'Ankle Mobility Test & Wall Drill',
+      videoChannel: 'Squat University',
+      videoNote: 'Drive knee straight toward wall keeping heel flat on ground.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mach-calf-raise'],
     tags: ['mobility', 'ankles', 'recovery']
   },
@@ -875,6 +1100,15 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     commonMistakes: ['Moving from lower back rather than thoracic mid-spine.'],
     beginnerModifications: ['Perform seated on bench if wrists dislike floor pressure.'],
     safetyNotes: ['Promotes shoulder health for pressing machines.'],
+    media: {
+      diagramType: 'mobility-spine',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/w_UKg_p0p8k',
+      externalUrl: 'https://www.youtube.com/watch?v=w_UKg_p0p8k',
+      videoTitle: 'Thoracic Spine Mobility & Cat-Cow Drill',
+      videoChannel: 'Athlean-X',
+      videoNote: 'Breathe through the thoracic spine rotation to unlock overhead shoulder mobility.',
+      isExternal: true
+    },
     alternativeExerciseIds: ['mobility-hips'],
     tags: ['mobility', 'spine', 'chest', 'recovery']
   }

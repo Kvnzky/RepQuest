@@ -47,10 +47,14 @@ export interface AppSettings {
 }
 
 export interface ExerciseMedia {
-  thumbnailSvg?: string
+  diagramType?: string
   videoUrl?: string
-  isExternal?: boolean
+  externalUrl?: string
+  videoTitle?: string
+  videoChannel?: string
   videoNote?: string
+  thumbnailSvg?: string
+  isExternal?: boolean
 }
 
 export interface Exercise {

@@ -12,7 +12,8 @@ import {
   Pause,
   Flame,
   Check,
-  Timer as TimerIcon
+  Timer as TimerIcon,
+  Video
 } from 'lucide-react'
 import {
   WorkoutSession,
@@ -26,6 +27,7 @@ import { RestTimerModal } from './RestTimerModal'
 import { ExerciseDetailModal } from './ExerciseDetailModal'
 import { MachineSubstituteModal } from './MachineSubstituteModal'
 import { WorkoutSummaryModal } from './WorkoutSummaryModal'
+import { ExerciseVisual } from '../common/ExerciseVisual'
 
 interface WorkoutModeProps {
   session: WorkoutSession
@@ -57,6 +59,7 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
   const [isRestTimerOpen, setIsRestTimerOpen] = useState<boolean>(false)
   const [restTimerDuration, setRestTimerDuration] = useState<number>(defaultRestSec)
   const [isDetailModalOpen, setIsDetailModalOpen] = useState<boolean>(false)
+  const [detailModalTab, setDetailModalTab] = useState<'guide' | 'video'>('guide')
   const [isSubstituteModalOpen, setIsSubstituteModalOpen] = useState<boolean>(false)
   const [isSummaryModalOpen, setIsSummaryModalOpen] = useState<boolean>(false)
 
@@ -404,7 +407,22 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
 
               <div className="flex gap-1.5">
                 <button
-                  onClick={() => setIsDetailModalOpen(true)}
+                  onClick={() => {
+                    setDetailModalTab('video')
+                    setIsDetailModalOpen(true)
+                  }}
+                  className="p-2.5 rounded-xl bg-sky-950/80 hover:bg-sky-900 text-sky-400 border border-sky-800/80 flex items-center gap-1 text-xs font-bold"
+                  title="Watch Video Demonstration"
+                  aria-label="Video Demo"
+                >
+                  <Video className="w-4 h-4 text-sky-400" />
+                  <span className="hidden sm:inline">Demo</span>
+                </button>
+                <button
+                  onClick={() => {
+                    setDetailModalTab('guide')
+                    setIsDetailModalOpen(true)
+                  }}
                   className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"
                   title="Exercise Instructions & Cues"
                   aria-label="Instructions"
@@ -419,6 +437,37 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
                 >
                   <RefreshCw className="w-4 h-4 text-amber-400" />
                 </button>
+              </div>
+            </div>
+
+            {/* Visual Biomechanical Machine Diagram */}
+            <div
+              onClick={() => {
+                setDetailModalTab('guide')
+                setIsDetailModalOpen(true)
+              }}
+              className="mt-3 cursor-pointer group"
+              title="Tap for full step-by-step instructions"
+            >
+              <ExerciseVisual exerciseId={currentExerciseData.id} className="w-full h-36" />
+              <div className="flex items-center justify-between mt-1 px-1 text-[10px] text-slate-400">
+                <span className="text-sky-400 font-semibold flex items-center gap-1">
+                  <span>Tap illustration for form & setup</span>
+                </span>
+                {currentExerciseData.media?.videoUrl && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      setDetailModalTab('video')
+                      setIsDetailModalOpen(true)
+                    }}
+                    className="text-sky-300 font-bold hover:underline flex items-center gap-1"
+                  >
+                    <Video className="w-3 h-3 text-sky-400" />
+                    <span>Watch Video Demo &rarr;</span>
+                  </button>
+                )}
               </div>
             </div>
 
@@ -680,6 +729,7 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
       <ExerciseDetailModal
         isOpen={isDetailModalOpen}
         exercise={currentExerciseData || null}
+        defaultTab={detailModalTab}
         onClose={() => setIsDetailModalOpen(false)}
         onSubstitute={() => {
           setIsDetailModalOpen(false)

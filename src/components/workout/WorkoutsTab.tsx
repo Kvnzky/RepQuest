@@ -12,11 +12,13 @@ import {
   Clock,
   CheckCircle2,
   Layers,
-  Sparkles
+  Sparkles,
+  Video
 } from 'lucide-react'
 import { WorkoutTemplate, Exercise, WorkoutSession } from '../../types'
 import { getProgramPhase } from '../../utils/progressionEngine'
 import { ExerciseDetailModal } from './ExerciseDetailModal'
+import { ExerciseVisual } from '../common/ExerciseVisual'
 
 interface WorkoutsTabProps {
   currentWeek: number
@@ -277,26 +279,35 @@ export const WorkoutsTab: React.FC<WorkoutsTabProps> = ({
           </div>
 
           {/* Exercise list */}
-          <div className="space-y-2">
+          <div className="space-y-2.5">
             {filteredExercises.map(ex => (
               <div
                 key={ex.id}
                 onClick={() => setSelectedExercise(ex)}
-                className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all flex items-center justify-between"
+                className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all flex items-center justify-between gap-3"
               >
-                <div>
-                  <div className="flex items-center gap-1.5 mb-1">
+                <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-800/80 bg-slate-950 flex items-center justify-center">
+                  <ExerciseVisual exerciseId={ex.id} className="w-full h-full scale-125" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-1.5 mb-0.5">
                     <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-sky-950 text-sky-400 border border-sky-800/60">
                       {ex.primaryMuscle}
                     </span>
-                    <span className="text-[10px] text-slate-400">{ex.equipment}</span>
+                    {ex.media?.videoUrl && (
+                      <span className="text-[9px] font-bold text-sky-300 flex items-center gap-0.5 bg-sky-950/60 px-1.5 py-0.5 rounded border border-sky-800/50">
+                        <Video className="w-2.5 h-2.5 text-sky-400" />
+                        <span>Demo</span>
+                      </span>
+                    )}
                   </div>
-                  <h4 className="text-xs font-bold text-white">{ex.name}</h4>
+                  <h4 className="text-xs font-bold text-white truncate">{ex.name}</h4>
+                  <p className="text-[10px] text-slate-400 truncate">{ex.equipment}</p>
                   <span className="text-[10px] text-slate-500 mt-0.5 block">
                     {ex.recommendedSets} sets × {ex.recommendedRepsMin}–{ex.recommendedRepsMax} reps • Rest: {ex.recommendedRestSec}s
                   </span>
                 </div>
-                <ChevronRight className="w-4 h-4 text-slate-500" />
+                <ChevronRight className="w-4 h-4 text-slate-500 shrink-0" />
               </div>
             ))}
           </div>

@@ -111,10 +111,8 @@ export async function initDatabase(): Promise<void> {
     await db.appSettings.put(DEFAULT_APP_SETTINGS)
   }
 
-  const exerciseCount = await db.exercises.count()
-  if (exerciseCount === 0) {
-    await db.exercises.bulkPut(DEFAULT_EXERCISES)
-  }
+  // Always update exercise catalog with latest media and demonstrations
+  await db.exercises.bulkPut(DEFAULT_EXERCISES)
 
   const templateCount = await db.workoutTemplates.count()
   if (templateCount === 0) {
