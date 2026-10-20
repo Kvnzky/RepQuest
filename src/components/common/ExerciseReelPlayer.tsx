@@ -14,6 +14,7 @@ import {
   Film
 } from 'lucide-react'
 import { Exercise } from '../../types'
+import { getLocalVideoUrl } from '../../utils/media'
 
 interface ExerciseReelPlayerProps {
   exercise: Exercise
@@ -72,7 +73,7 @@ export const ExerciseReelPlayer: React.FC<ExerciseReelPlayerProps> = ({
   }, [exercise.id, viewMode, autoPlay])
 
   const media = exercise.media
-  const localVideo = media?.localVideoPath || `/videos/${exercise.id}.mp4`
+  const localVideo = getLocalVideoUrl(media?.localVideoPath || exercise.id)
   const videoId = media?.videoId
   const shortsUrl = media?.shortsUrl || (videoId ? `https://www.youtube.com/shorts/${videoId}` : media?.externalUrl)
   const embedUrl = videoId

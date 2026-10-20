@@ -30,6 +30,7 @@ import { ExerciseDetailModal } from './ExerciseDetailModal'
 import { MachineSubstituteModal } from './MachineSubstituteModal'
 import { WorkoutSummaryModal } from './WorkoutSummaryModal'
 import { ExerciseVisual } from '../common/ExerciseVisual'
+import { getLocalVideoUrl } from '../../utils/media'
 
 interface WorkoutModeProps {
   session: WorkoutSession
@@ -454,7 +455,7 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
               <div className="relative h-36 sm:h-40 w-full overflow-hidden bg-slate-950">
                 {currentExerciseData.media?.localVideoPath ? (
                   <video
-                    src={currentExerciseData.media.localVideoPath}
+                    src={getLocalVideoUrl(currentExerciseData.media.localVideoPath)}
                     autoPlay
                     muted
                     loop

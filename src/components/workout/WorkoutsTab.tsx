@@ -20,6 +20,7 @@ import { WorkoutTemplate, Exercise, WorkoutSession } from '../../types'
 import { getProgramPhase } from '../../utils/progressionEngine'
 import { ExerciseDetailModal } from './ExerciseDetailModal'
 import { ExerciseVisual } from '../common/ExerciseVisual'
+import { getLocalVideoUrl } from '../../utils/media'
 
 interface WorkoutsTabProps {
   currentWeek: number
@@ -291,7 +292,7 @@ export const WorkoutsTab: React.FC<WorkoutsTabProps> = ({
                   {ex.media?.localVideoPath ? (
                     <>
                       <video
-                        src={ex.media.localVideoPath}
+                        src={getLocalVideoUrl(ex.media.localVideoPath)}
                         autoPlay
                         muted
                         loop
