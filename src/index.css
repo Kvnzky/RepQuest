@@ -36,10 +36,200 @@
   background: #334155;
 }
 
-/* Distraction-free animations */
-@keyframes pulse-subtle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.88; transform: scale(1.02); }
+/* Biomechanical Exercise Keyframe Animations (Concentric -> Peak Squeeze -> Controlled Eccentric) */
+@keyframes anim-push-horizontal {
+  0%, 100% { transform: translateX(0px); }
+  35% { transform: translateX(28px); }
+  50% { transform: translateX(28px); }
+  85% { transform: translateX(6px); }
+}
+
+@keyframes anim-push-incline {
+  0%, 100% { transform: translate(0px, 0px); }
+  35% { transform: translate(22px, -20px); }
+  50% { transform: translate(22px, -20px); }
+  85% { transform: translate(5px, -5px); }
+}
+
+@keyframes anim-pull-horizontal {
+  0%, 100% { transform: translateX(0px); }
+  35% { transform: translateX(-26px); }
+  50% { transform: translateX(-26px); }
+  85% { transform: translateX(-5px); }
+}
+
+@keyframes anim-pull-vertical {
+  0%, 100% { transform: translateY(0px); }
+  35% { transform: translateY(26px); }
+  50% { transform: translateY(26px); }
+  85% { transform: translateY(6px); }
+}
+
+@keyframes anim-press-overhead {
+  0%, 100% { transform: translateY(0px); }
+  35% { transform: translateY(-26px); }
+  50% { transform: translateY(-26px); }
+  85% { transform: translateY(-6px); }
+}
+
+@keyframes anim-raise-lateral {
+  0%, 100% { transform: rotate(0deg); }
+  35% { transform: rotate(-24deg); }
+  50% { transform: rotate(-24deg); }
+  85% { transform: rotate(-5deg); }
+}
+
+@keyframes anim-raise-lateral-right {
+  0%, 100% { transform: rotate(0deg); }
+  35% { transform: rotate(24deg); }
+  50% { transform: rotate(24deg); }
+  85% { transform: rotate(5deg); }
+}
+
+@keyframes anim-curl-arms {
+  0%, 100% { transform: rotate(0deg); }
+  35% { transform: rotate(-38deg); }
+  50% { transform: rotate(-38deg); }
+  85% { transform: rotate(-8deg); }
+}
+
+@keyframes anim-push-triceps {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  35% { transform: translateY(18px) rotate(15deg); }
+  50% { transform: translateY(18px) rotate(15deg); }
+  85% { transform: translateY(4px); }
+}
+
+@keyframes anim-leg-press-sled {
+  0%, 100% { transform: translate(0px, 0px); }
+  35% { transform: translate(28px, -28px); }
+  50% { transform: translate(28px, -28px); }
+  85% { transform: translate(6px, -6px); }
+}
+
+@keyframes anim-leg-curl-pad {
+  0%, 100% { transform: rotate(0deg); }
+  35% { transform: rotate(38deg); }
+  50% { transform: rotate(38deg); }
+  85% { transform: rotate(8deg); }
+}
+
+@keyframes anim-leg-extension-pad {
+  0%, 100% { transform: rotate(0deg); }
+  35% { transform: rotate(-42deg); }
+  50% { transform: rotate(-42deg); }
+  85% { transform: rotate(-8deg); }
+}
+
+@keyframes anim-glute-thrust {
+  0%, 100% { transform: translateY(0px); }
+  35% { transform: translateY(-24px); }
+  50% { transform: translateY(-24px); }
+  85% { transform: translateY(-5px); }
+}
+
+@keyframes anim-ab-curl {
+  0%, 100% { transform: rotate(0deg); }
+  35% { transform: rotate(16deg); }
+  50% { transform: rotate(16deg); }
+  85% { transform: rotate(4deg); }
+}
+
+@keyframes anim-weight-stack {
+  0%, 100% { transform: translateY(0px); }
+  35% { transform: translateY(-16px); }
+  50% { transform: translateY(-16px); }
+  85% { transform: translateY(-3px); }
+}
+
+@keyframes anim-muscle-glow {
+  0%, 100% { fill-opacity: 0.75; filter: drop-shadow(0 0 2px #38bdf8); }
+  35% { fill-opacity: 1; filter: drop-shadow(0 0 10px #38bdf8); }
+  50% { fill-opacity: 1; filter: drop-shadow(0 0 12px #38bdf8); }
+  85% { fill-opacity: 0.8; }
+}
+
+@keyframes anim-pedal-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes anim-walk-stride {
+  0%, 100% { transform: rotate(-15deg); }
+  50% { transform: rotate(15deg); }
+}
+
+.anim-push-h {
+  animation: anim-push-horizontal 3.6s infinite ease-in-out;
+}
+.anim-push-inc {
+  animation: anim-push-incline 3.6s infinite ease-in-out;
+}
+.anim-pull-h {
+  animation: anim-pull-horizontal 3.6s infinite ease-in-out;
+}
+.anim-pull-v {
+  animation: anim-pull-vertical 3.6s infinite ease-in-out;
+}
+.anim-press-up {
+  animation: anim-press-overhead 3.6s infinite ease-in-out;
+}
+.anim-raise-left {
+  transform-origin: 145px 72px;
+  animation: anim-raise-lateral 3.6s infinite ease-in-out;
+}
+.anim-raise-right {
+  transform-origin: 175px 72px;
+  animation: anim-raise-lateral-right 3.6s infinite ease-in-out;
+}
+.anim-curl {
+  transform-origin: 165px 105px;
+  animation: anim-curl-arms 3.6s infinite ease-in-out;
+}
+.anim-triceps {
+  transform-origin: 135px 85px;
+  animation: anim-push-triceps 3.6s infinite ease-in-out;
+}
+.anim-leg-press {
+  animation: anim-leg-press-sled 3.8s infinite ease-in-out;
+}
+.anim-leg-curl {
+  transform-origin: 160px 125px;
+  animation: anim-leg-curl-pad 3.6s infinite ease-in-out;
+}
+.anim-leg-ext {
+  transform-origin: 160px 125px;
+  animation: anim-leg-extension-pad 3.6s infinite ease-in-out;
+}
+.anim-glute {
+  animation: anim-glute-thrust 3.6s infinite ease-in-out;
+}
+.anim-crunch {
+  transform-origin: 130px 128px;
+  animation: anim-ab-curl 3.6s infinite ease-in-out;
+}
+.anim-weights {
+  animation: anim-weight-stack 3.6s infinite ease-in-out;
+}
+.anim-muscle {
+  animation: anim-muscle-glow 3.6s infinite ease-in-out;
+}
+.anim-pedal {
+  transform-origin: 160px 145px;
+  animation: anim-pedal-spin 1.8s infinite linear;
+}
+.anim-walk {
+  transform-origin: 155px 120px;
+  animation: anim-walk-stride 1.4s infinite ease-in-out;
+}
+
+/* Pause helper */
+.anim-paused * {
+  animation-play-state: paused !important;
+}
+
+.anim-slow * {
+  animation-duration: 6s !important;
 }
 
 .animate-pulse-subtle {

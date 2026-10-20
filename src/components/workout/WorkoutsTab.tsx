@@ -13,7 +13,7 @@ import {
   CheckCircle2,
   Layers,
   Sparkles,
-  Video
+  Activity
 } from 'lucide-react'
 import { WorkoutTemplate, Exercise, WorkoutSession } from '../../types'
 import { getProgramPhase } from '../../utils/progressionEngine'
@@ -294,12 +294,10 @@ export const WorkoutsTab: React.FC<WorkoutsTabProps> = ({
                     <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-sky-950 text-sky-400 border border-sky-800/60">
                       {ex.primaryMuscle}
                     </span>
-                    {ex.media?.videoUrl && (
-                      <span className="text-[9px] font-bold text-sky-300 flex items-center gap-0.5 bg-sky-950/60 px-1.5 py-0.5 rounded border border-sky-800/50">
-                        <Video className="w-2.5 h-2.5 text-sky-400" />
-                        <span>Demo</span>
-                      </span>
-                    )}
+                    <span className="text-[9px] font-bold text-sky-300 flex items-center gap-0.5 bg-sky-950/60 px-1.5 py-0.5 rounded border border-sky-800/50">
+                      <Activity className="w-2.5 h-2.5 text-sky-400" />
+                      <span>Animated</span>
+                    </span>
                   </div>
                   <h4 className="text-xs font-bold text-white truncate">{ex.name}</h4>
                   <p className="text-[10px] text-slate-400 truncate">{ex.equipment}</p>

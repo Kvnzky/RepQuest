@@ -7,11 +7,9 @@ import {
   Sparkles,
   Wind,
   Layers,
-  Video,
-  ExternalLink,
-  Wifi,
+  Activity,
   WifiOff,
-  Image as ImageIcon
+  ImageIcon
 } from 'lucide-react'
 import { Exercise } from '../../types'
 import { ExerciseVisual } from '../common/ExerciseVisual'
@@ -21,7 +19,7 @@ interface ExerciseDetailModalProps {
   isOpen: boolean
   onClose: () => void
   onSubstitute?: () => void
-  defaultTab?: 'guide' | 'video'
+  defaultTab?: 'guide' | 'animation'
 }
 
 export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
@@ -29,9 +27,9 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
   isOpen,
   onClose,
   onSubstitute,
-  defaultTab = 'guide'
+  defaultTab = 'animation'
 }) => {
-  const [activeTab, setActiveTab] = useState<'guide' | 'video'>(defaultTab)
+  const [activeTab, setActiveTab] = useState<'guide' | 'animation'>(defaultTab)
 
   if (!isOpen || !exercise) return null
 
@@ -60,8 +58,20 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
           </button>
         </div>
 
-        {/* Tab Switcher: Guide & Visual vs Video Demo */}
+        {/* Tab Switcher: Animated Movement vs Setup Guide */}
         <div className="px-4 pt-3 pb-2 bg-[#0f172a] border-b border-slate-800/60 flex gap-2">
+          <button
+            onClick={() => setActiveTab('animation')}
+            className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+              activeTab === 'animation'
+                ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20'
+                : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
+            }`}
+          >
+            <Activity className="w-3.5 h-3.5" />
+            <span>Movement Animation</span>
+          </button>
+
           <button
             onClick={() => setActiveTab('guide')}
             className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
@@ -71,42 +81,59 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
             }`}
           >
             <ImageIcon className="w-3.5 h-3.5" />
-            <span>Diagram & Instructions</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab('video')}
-            className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
-              activeTab === 'video'
-                ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20'
-                : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
-            }`}
-          >
-            <Video className="w-3.5 h-3.5" />
-            <span>Video Demonstration</span>
+            <span>Machine Setup & Form</span>
           </button>
         </div>
 
         {/* Scrollable Content */}
         <div className="p-5 overflow-y-auto space-y-5 text-sm">
-          {/* TAB 1: GUIDE & VISUAL DIAGRAM */}
-          {activeTab === 'guide' && (
-            <>
-              {/* Visual Machine Anatomy Diagram (Works 100% Offline) */}
+          {/* TAB 1: ANIMATED MOVEMENT GUIDE (CENTERPIECE) */}
+          {activeTab === 'animation' && (
+            <div className="space-y-4">
+              {/* Animated Biomechanical Loop with Speed & Pause Controls */}
               <div>
                 <div className="flex items-center justify-between mb-1.5">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1">
-                    <Layers className="w-3.5 h-3.5 text-sky-400" />
-                    Machine Biomechanical Illustration
+                    <Activity className="w-3.5 h-3.5 text-sky-400" />
+                    Biomechanical Repetition Cadence
                   </span>
                   <span className="text-[10px] text-emerald-400 font-semibold flex items-center gap-1">
-                    <WifiOff className="w-3 h-3" /> Offline Ready
+                    <WifiOff className="w-3 h-3" /> 100% Offline
                   </span>
                 </div>
-                <ExerciseVisual exerciseId={exercise.id} className="w-full h-48" />
+                <ExerciseVisual
+                  exerciseId={exercise.id}
+                  className="w-full h-52"
+                  animated={true}
+                  showControls={true}
+                />
               </div>
 
-              {/* Quick Targets Bar */}
+              {/* 3-Step Repetition Cadence Guide */}
+              <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-2.5">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                  Repetition Tempo & Muscle Cadence
+                </h4>
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+                    <span className="text-[10px] text-sky-400 uppercase font-bold block">1. Push / Pull</span>
+                    <span className="text-sm font-black text-white">1–2 sec</span>
+                    <span className="text-[9px] text-slate-500 block">Exhale with power</span>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+                    <span className="text-[10px] text-amber-400 uppercase font-bold block">2. Squeeze</span>
+                    <span className="text-sm font-black text-white">1 sec</span>
+                    <span className="text-[9px] text-slate-500 block">Hold peak contraction</span>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+                    <span className="text-[10px] text-emerald-400 uppercase font-bold block">3. Negative</span>
+                    <span className="text-sm font-black text-white">2–3 sec</span>
+                    <span className="text-[9px] text-slate-500 block">Inhale as weight lowers</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Target Prescription Bar */}
               <div className="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-slate-900 border border-slate-800/80 text-center">
                 <div>
                   <span className="text-[10px] text-slate-500 uppercase tracking-wide block">Prescribed</span>
@@ -124,25 +151,29 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
                 </div>
               </div>
 
-              {/* Video Quick Link Callout */}
-              {exercise.media?.videoUrl && (
-                <div
-                  onClick={() => setActiveTab('video')}
-                  className="p-3 rounded-2xl bg-gradient-to-r from-sky-950/50 to-slate-900 border border-sky-800/60 flex items-center justify-between cursor-pointer hover:border-sky-500 transition-all"
-                >
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center">
-                      <Video className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <span className="text-xs font-bold text-white block">Watch Video Demonstration</span>
-                      <span className="text-[10px] text-slate-400">{exercise.media.videoChannel || 'Form Video Guide'}</span>
-                    </div>
-                  </div>
-                  <span className="text-xs font-semibold text-sky-400">Watch &rarr;</span>
-                </div>
-              )}
+              {/* Breathing Synchronization */}
+              <div className="p-3.5 rounded-2xl bg-sky-950/30 border border-sky-800/40">
+                <h3 className="text-xs font-bold text-sky-300 flex items-center gap-1.5 mb-1">
+                  <Wind className="w-4 h-4 text-sky-400" />
+                  Breathing Synchronizer
+                </h3>
+                <p className="text-xs text-sky-100/90 leading-relaxed">{exercise.breathingCues}</p>
+              </div>
 
+              {/* Quick Link to Setup Steps */}
+              <button
+                onClick={() => setActiveTab('guide')}
+                className="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 border border-slate-700 flex items-center justify-center gap-1.5"
+              >
+                <Layers className="w-4 h-4 text-sky-400" />
+                <span>View Full Machine Setup & Ergonomics &rarr;</span>
+              </button>
+            </div>
+          )}
+
+          {/* TAB 2: DETAILED SETUP & TECHNIQUE GUIDE */}
+          {activeTab === 'guide' && (
+            <>
               {/* Machine Setup Instructions */}
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5 mb-2.5">
@@ -175,15 +206,6 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              {/* Breathing Cues */}
-              <div className="p-3.5 rounded-2xl bg-sky-950/30 border border-sky-800/40">
-                <h3 className="text-xs font-bold text-sky-300 flex items-center gap-1.5 mb-1">
-                  <Wind className="w-4 h-4 text-sky-400" />
-                  Breathing Cue
-                </h3>
-                <p className="text-xs text-sky-100/90 leading-relaxed">{exercise.breathingCues}</p>
               </div>
 
               {/* Common Mistakes */}
@@ -238,76 +260,6 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
               )}
             </>
           )}
-
-          {/* TAB 2: EMBEDDED VIDEO DEMONSTRATION */}
-          {activeTab === 'video' && (
-            <div className="space-y-4">
-              {/* Online streaming disclaimer banner */}
-              <div className="p-3 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-2.5 text-xs text-slate-400">
-                <Wifi className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-                <span>
-                  Video streaming requires an active internet connection. If gym connectivity is weak, the illustration and step-by-step setup in the <strong>Diagram & Instructions</strong> tab are fully available offline.
-                </span>
-              </div>
-
-              {/* Responsive Video Embed Player */}
-              {exercise.media?.videoUrl ? (
-                <div className="rounded-2xl overflow-hidden border border-slate-800 bg-black aspect-video relative shadow-2xl">
-                  <iframe
-                    src={exercise.media.videoUrl}
-                    title={exercise.media.videoTitle || `${exercise.name} Demonstration`}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              ) : (
-                <div className="p-8 rounded-2xl bg-slate-900 text-center text-slate-500">
-                  No video stream registered for this movement.
-                </div>
-              )}
-
-              {/* Video Title and Coaching Cue Note */}
-              <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-2">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h4 className="text-xs font-bold text-white">
-                      {exercise.media?.videoTitle || `${exercise.name} Guide`}
-                    </h4>
-                    <span className="text-[10px] text-sky-400 font-semibold block mt-0.5">
-                      Channel: {exercise.media?.videoChannel || 'Form Video Guide'}
-                    </span>
-                  </div>
-
-                  {exercise.media?.externalUrl && (
-                    <a
-                      href={exercise.media.externalUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center gap-1 text-[10px] font-semibold"
-                    >
-                      <span>YouTube</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  )}
-                </div>
-
-                {exercise.media?.videoNote && (
-                  <p className="text-xs text-slate-300 leading-relaxed bg-slate-950 p-2.5 rounded-xl border border-slate-800">
-                    💡 <strong>Coaching Cue:</strong> {exercise.media.videoNote}
-                  </p>
-                )}
-              </div>
-
-              {/* Fallback diagram preview */}
-              <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1.5">
-                  Static Biomechanical Reference
-                </span>
-                <ExerciseVisual exerciseId={exercise.id} className="w-full h-40" />
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Footer Actions */}
@@ -324,7 +276,7 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
             onClick={onClose}
             className="flex-1 py-3 px-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-xs font-bold text-slate-950 transition-colors shadow-lg shadow-sky-500/20"
           >
-            Done
+            Got It
           </button>
         </div>
       </div>
