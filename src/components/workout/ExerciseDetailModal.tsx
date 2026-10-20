@@ -112,7 +112,7 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
           {/* TAB 1: REAL VIDEO REEL (PRIMARY HOW-TO) */}
           {activeTab === 'video' && (
             <div className="space-y-4">
-              <ExerciseReelPlayer exercise={exercise} autoPlay={false} showNotes={true} />
+              <ExerciseReelPlayer exercise={exercise} autoPlay={true} showNotes={true} />
 
               {/* Target Prescription Bar */}
               <div className="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-slate-900 border border-slate-800/80 text-center">

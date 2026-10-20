@@ -288,7 +288,21 @@ export const WorkoutsTab: React.FC<WorkoutsTabProps> = ({
                 className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all flex items-center justify-between gap-3 group"
               >
                 <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-800/80 bg-slate-950 relative flex items-center justify-center">
-                  {ex.media?.videoId ? (
+                  {ex.media?.localVideoPath ? (
+                    <>
+                      <video
+                        src={ex.media.localVideoPath}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform"
+                      />
+                      <div className="absolute inset-0 bg-slate-950/30 flex items-center justify-center pointer-events-none">
+                        <Play className="w-3.5 h-3.5 fill-white text-white drop-shadow" />
+                      </div>
+                    </>
+                  ) : ex.media?.videoId ? (
                     <>
                       <img
                         src={`https://i.ytimg.com/vi/${ex.media.videoId}/hqdefault.jpg`}
@@ -312,9 +326,9 @@ export const WorkoutsTab: React.FC<WorkoutsTabProps> = ({
                     <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-sky-950 text-sky-400 border border-sky-800/60">
                       {ex.primaryMuscle}
                     </span>
-                    <span className="text-[9px] font-bold text-sky-300 flex items-center gap-0.5 bg-sky-950/60 px-1.5 py-0.5 rounded border border-sky-800/50">
-                      <Video className="w-2.5 h-2.5 text-sky-400" />
-                      <span>Video Reel</span>
+                    <span className="text-[9px] font-bold text-emerald-400 flex items-center gap-0.5 bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-800/50">
+                      <Video className="w-2.5 h-2.5 text-emerald-400" />
+                      <span>Offline Reel</span>
                     </span>
                   </div>
                   <h4 className="text-xs font-bold text-white truncate">{ex.name}</h4>

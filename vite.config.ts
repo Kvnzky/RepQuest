@@ -41,7 +41,24 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}']
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,mp4}'],
+        maximumFileSizeToCacheInBytes: 30 * 1024 * 1024,
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith('/videos/'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'exercise-videos-cache',
+              expiration: {
+                maxEntries: 60,
+                maxAgeSeconds: 365 * 24 * 60 * 60
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
+            }
+          }
+        ]
       }
     })
   ]

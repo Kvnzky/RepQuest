@@ -50,6 +50,7 @@ export interface ExerciseMedia {
   diagramType?: string
   videoId?: string
   videoUrl?: string
+  localVideoPath?: string
   externalUrl?: string
   shortsUrl?: string
   videoTitle?: string

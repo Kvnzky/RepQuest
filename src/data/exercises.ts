@@ -42,6 +42,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     media: {
       diagramType: 'mach-chest-press',
+      localVideoPath: '/videos/mach-chest-press.mp4',
       videoId: 'Qu7-ceCvq7w',
       videoUrl: 'https://www.youtube-nocookie.com/embed/Qu7-ceCvq7w',
       externalUrl: 'https://www.youtube.com/watch?v=Qu7-ceCvq7w',
@@ -90,6 +91,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     media: {
       diagramType: 'mach-incline-chest-press',
+      localVideoPath: '/videos/mach-incline-chest-press.mp4',
       videoId: 'VesHgJR14E8',
       videoUrl: 'https://www.youtube-nocookie.com/embed/VesHgJR14E8',
       externalUrl: 'https://www.youtube.com/watch?v=VesHgJR14E8',
@@ -139,6 +141,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     media: {
       diagramType: 'mach-seated-row',
+      localVideoPath: '/videos/mach-seated-row.mp4',
       videoId: 'qD1WZ5pSuvk',
       videoUrl: 'https://www.youtube-nocookie.com/embed/qD1WZ5pSuvk',
       externalUrl: 'https://www.youtube.com/watch?v=qD1WZ5pSuvk',
@@ -180,6 +183,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Pad protects lower back; keep torso glued to pad.'],
     media: {
       diagramType: 'mach-chest-supported-row',
+      localVideoPath: '/videos/mach-chest-supported-row.mp4',
       videoId: 'FVyVvApcyZY',
       videoUrl: 'https://www.youtube-nocookie.com/embed/FVyVvApcyZY',
       externalUrl: 'https://www.youtube.com/watch?v=FVyVvApcyZY',
@@ -227,6 +231,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Always pull strictly to front of chest.'],
     media: {
       diagramType: 'mach-lat-pulldown',
+      localVideoPath: '/videos/mach-lat-pulldown.mp4',
       videoId: 'bNmvKpJSWKM',
       videoUrl: 'https://www.youtube-nocookie.com/embed/bNmvKpJSWKM',
       externalUrl: 'https://www.youtube.com/watch?v=bNmvKpJSWKM',
@@ -269,6 +274,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Maintain neutral spine without violent jerking.'],
     media: {
       diagramType: 'mach-neutral-lat-pulldown',
+      localVideoPath: '/videos/mach-neutral-lat-pulldown.mp4',
       videoId: 'n9-LFZWeqZ4',
       videoUrl: 'https://www.youtube-nocookie.com/embed/n9-LFZWeqZ4',
       externalUrl: 'https://www.youtube.com/watch?v=n9-LFZWeqZ4',
@@ -310,6 +316,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Step off slowly; let pad rise completely before releasing grips.'],
     media: {
       diagramType: 'mach-assisted-pullup',
+      localVideoPath: '/videos/mach-assisted-pullup.mp4',
       videoId: 'CdO5BvP6Ti8',
       videoUrl: 'https://www.youtube-nocookie.com/embed/CdO5BvP6Ti8',
       externalUrl: 'https://www.youtube.com/watch?v=CdO5BvP6Ti8',
@@ -357,6 +364,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Never press behind neck; always in scapular plane.'],
     media: {
       diagramType: 'mach-shoulder-press',
+      localVideoPath: '/videos/mach-shoulder-press.mp4',
       videoId: 'Gkk-6q7Rq-s',
       videoUrl: 'https://www.youtube-nocookie.com/embed/Gkk-6q7Rq-s',
       externalUrl: 'https://www.youtube.com/watch?v=Gkk-6q7Rq-s',
@@ -401,6 +409,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Stop at 90-degree shoulder abduction.'],
     media: {
       diagramType: 'mach-lateral-raise',
+      localVideoPath: '/videos/mach-lateral-raise.mp4',
       videoId: 'Kl3LEzQ5Zqs',
       videoUrl: 'https://www.youtube-nocookie.com/embed/Kl3LEzQ5Zqs',
       externalUrl: 'https://www.youtube.com/watch?v=Kl3LEzQ5Zqs',
@@ -445,6 +454,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Avoid excessive hyper-extension behind the back plane.'],
     media: {
       diagramType: 'mach-reverse-pec-deck',
+      localVideoPath: '/videos/mach-reverse-pec-deck.mp4',
       videoId: 'O2J8Qs7Wl3U',
       videoUrl: 'https://www.youtube-nocookie.com/embed/O2J8Qs7Wl3U',
       externalUrl: 'https://www.youtube.com/watch?v=O2J8Qs7Wl3U',
@@ -489,6 +499,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Do not hyperextend elbows violently at bottom of preacher pad.'],
     media: {
       diagramType: 'mach-biceps-curl',
+      localVideoPath: '/videos/mach-biceps-curl.mp4',
       videoId: 'S4dDLfp3e8w',
       videoUrl: 'https://www.youtube-nocookie.com/embed/S4dDLfp3e8w',
       externalUrl: 'https://www.youtube.com/watch?v=S4dDLfp3e8w',
@@ -533,6 +544,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Keep elbows glued to sides; do not let elbows flare wide.'],
     media: {
       diagramType: 'cable-triceps-pushdown',
+      localVideoPath: '/videos/cable-triceps-pushdown.mp4',
       videoId: 'u36jNfqh8_U',
       videoUrl: 'https://www.youtube-nocookie.com/embed/u36jNfqh8_U',
       externalUrl: 'https://www.youtube.com/watch?v=u36jNfqh8_U',
@@ -586,6 +598,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     media: {
       diagramType: 'mach-leg-press',
+      localVideoPath: '/videos/mach-leg-press.mp4',
       videoId: 'nDh_BlnLCGc',
       videoUrl: 'https://www.youtube-nocookie.com/embed/nDh_BlnLCGc',
       externalUrl: 'https://www.youtube.com/watch?v=nDh_BlnLCGc',
@@ -631,6 +644,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Ensure safety catch pins are adjusted to catch carriage if needed.'],
     media: {
       diagramType: 'mach-hack-squat',
+      localVideoPath: '/videos/mach-hack-squat.mp4',
       videoId: 'g9i05umL5vc',
       videoUrl: 'https://www.youtube-nocookie.com/embed/g9i05umL5vc',
       externalUrl: 'https://www.youtube.com/watch?v=g9i05umL5vc',
@@ -679,6 +693,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Ensure knee is aligned with red pivot marker on machine.'],
     media: {
       diagramType: 'mach-seated-leg-curl',
+      localVideoPath: '/videos/mach-seated-leg-curl.mp4',
       videoId: '_lgE0gPvbik',
       videoUrl: 'https://www.youtube-nocookie.com/embed/_lgE0gPvbik',
       externalUrl: 'https://www.youtube.com/watch?v=_lgE0gPvbik',
@@ -725,6 +740,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Avoid heavy 1-5 rep maximum attempts on leg extensions.'],
     media: {
       diagramType: 'mach-leg-extension',
+      localVideoPath: '/videos/mach-leg-extension.mp4',
       videoId: 'iQ92TuvBqRo',
       videoUrl: 'https://www.youtube-nocookie.com/embed/iQ92TuvBqRo',
       externalUrl: 'https://www.youtube.com/watch?v=iQ92TuvBqRo',
@@ -770,6 +786,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Keep chin tucked slightly forward toward chest during entire thrust.'],
     media: {
       diagramType: 'mach-glute-drive',
+      localVideoPath: '/videos/mach-glute-drive.mp4',
       videoId: '_i6qpcI1Nw4',
       videoUrl: 'https://www.youtube-nocookie.com/embed/_i6qpcI1Nw4',
       externalUrl: 'https://www.youtube.com/watch?v=_i6qpcI1Nw4',
@@ -811,6 +828,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Joint friendly; zero spinal compression.'],
     media: {
       diagramType: 'bw-glute-bridge',
+      localVideoPath: '/videos/bw-glute-bridge.mp4',
       videoId: 'LORVjN2bg5o',
       videoUrl: 'https://www.youtube-nocookie.com/embed/LORVjN2bg5o',
       externalUrl: 'https://www.youtube.com/watch?v=LORVjN2bg5o',
@@ -856,6 +874,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Keep balls of feet securely centered on edge to prevent slipping.'],
     media: {
       diagramType: 'mach-calf-raise',
+      localVideoPath: '/videos/mach-calf-raise.mp4',
       videoId: 'pHm6LFuGGbs',
       videoUrl: 'https://www.youtube-nocookie.com/embed/pHm6LFuGGbs',
       externalUrl: 'https://www.youtube.com/watch?v=pHm6LFuGGbs',
@@ -901,6 +920,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Do not yank neck forward.'],
     media: {
       diagramType: 'mach-ab-crunch',
+      localVideoPath: '/videos/mach-ab-crunch.mp4',
       videoId: 'mnRhbUB3Fjs',
       videoUrl: 'https://www.youtube-nocookie.com/embed/mnRhbUB3Fjs',
       externalUrl: 'https://www.youtube.com/watch?v=mnRhbUB3Fjs',
@@ -950,6 +970,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Brace abs as if about to be tapped on stomach.'],
     media: {
       diagramType: 'cable-pallof-press',
+      localVideoPath: '/videos/cable-pallof-press.mp4',
       videoId: 'YWfioXCZCu0',
       videoUrl: 'https://www.youtube-nocookie.com/embed/YWfioXCZCu0',
       externalUrl: 'https://www.youtube.com/watch?v=YWfioXCZCu0',
@@ -993,6 +1014,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Attach safety emergency clip to clothing.'],
     media: {
       diagramType: 'cardio-treadmill',
+      localVideoPath: '/videos/cardio-treadmill.mp4',
       videoId: 'HwXYMPGjlUg',
       videoUrl: 'https://www.youtube-nocookie.com/embed/HwXYMPGjlUg',
       externalUrl: 'https://www.youtube.com/watch?v=HwXYMPGjlUg',
@@ -1032,6 +1054,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Great zero-impact alternative to treadmill.'],
     media: {
       diagramType: 'cardio-bike',
+      localVideoPath: '/videos/cardio-bike.mp4',
       videoId: 'dieOsJlsvpM',
       videoUrl: 'https://www.youtube-nocookie.com/embed/dieOsJlsvpM',
       externalUrl: 'https://www.youtube.com/watch?v=dieOsJlsvpM',
@@ -1072,6 +1095,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['No pinching sensations in groin; back off if sharp pinch occurs.'],
     media: {
       diagramType: 'mobility-hips',
+      localVideoPath: '/videos/mobility-hips.mp4',
       videoId: 'm51AZSXMvEA',
       videoUrl: 'https://www.youtube-nocookie.com/embed/m51AZSXMvEA',
       externalUrl: 'https://www.youtube.com/watch?v=m51AZSXMvEA',
@@ -1112,6 +1136,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Gentle stretch at back of lower leg, no joint impingement.'],
     media: {
       diagramType: 'mobility-ankles',
+      localVideoPath: '/videos/mobility-ankles.mp4',
       videoId: 'IikP_teeLkI',
       videoUrl: 'https://www.youtube-nocookie.com/embed/IikP_teeLkI',
       externalUrl: 'https://www.youtube.com/watch?v=IikP_teeLkI',
@@ -1152,6 +1177,7 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Promotes shoulder health for pressing machines.'],
     media: {
       diagramType: 'mobility-spine',
+      localVideoPath: '/videos/mobility-spine.mp4',
       videoId: 'LIVJZZyZ2qM',
       videoUrl: 'https://www.youtube-nocookie.com/embed/LIVJZZyZ2qM',
       externalUrl: 'https://www.youtube.com/watch?v=LIVJZZyZ2qM',

@@ -14,7 +14,8 @@ import {
   Check,
   Timer as TimerIcon,
   Activity,
-  Video
+  Video,
+  WifiOff
 } from 'lucide-react'
 import {
   WorkoutSession,
@@ -450,8 +451,17 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
               className="mt-3 relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800/90 cursor-pointer group hover:border-sky-500/50 transition-all shadow-lg"
               title="Tap to watch real video reel tutorial"
             >
-              <div className="relative h-32 sm:h-36 w-full overflow-hidden bg-slate-900">
-                {currentExerciseData.media?.videoId ? (
+              <div className="relative h-36 sm:h-40 w-full overflow-hidden bg-slate-950">
+                {currentExerciseData.media?.localVideoPath ? (
+                  <video
+                    src={currentExerciseData.media.localVideoPath}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover opacity-70 group-hover:scale-105 group-hover:opacity-85 transition-all duration-500"
+                  />
+                ) : currentExerciseData.media?.videoId ? (
                   <img
                     src={`https://i.ytimg.com/vi/${currentExerciseData.media.videoId}/hqdefault.jpg`}
                     alt={currentExerciseData.name}
@@ -466,11 +476,11 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
                 )}
 
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
 
                 {/* Center Play Button Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-11 h-11 rounded-full bg-sky-500/90 text-slate-950 flex items-center justify-center shadow-lg shadow-sky-500/40 group-hover:scale-110 group-hover:bg-sky-400 transition-all">
+                  <div className="w-12 h-12 rounded-full bg-sky-500/90 text-slate-950 flex items-center justify-center shadow-lg shadow-sky-500/40 group-hover:scale-110 group-hover:bg-sky-400 transition-all">
                     <Play className="w-5 h-5 fill-slate-950 ml-0.5" />
                   </div>
                 </div>
@@ -480,6 +490,10 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
                   <span className="text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full bg-sky-950/90 text-sky-400 border border-sky-800/80 backdrop-blur-md flex items-center gap-1">
                     <Video className="w-3 h-3 text-sky-400" />
                     <span>How-To Reel</span>
+                  </span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-950/90 text-emerald-400 border border-emerald-800/80 backdrop-blur-md flex items-center gap-1">
+                    <WifiOff className="w-2.5 h-2.5" />
+                    <span>100% Offline</span>
                   </span>
                 </div>
 
