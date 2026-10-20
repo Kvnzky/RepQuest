@@ -48,8 +48,10 @@ export interface AppSettings {
 
 export interface ExerciseMedia {
   diagramType?: string
+  videoId?: string
   videoUrl?: string
   externalUrl?: string
+  shortsUrl?: string
   videoTitle?: string
   videoChannel?: string
   videoNote?: string

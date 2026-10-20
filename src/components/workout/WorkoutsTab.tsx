@@ -13,7 +13,8 @@ import {
   CheckCircle2,
   Layers,
   Sparkles,
-  Activity
+  Activity,
+  Video
 } from 'lucide-react'
 import { WorkoutTemplate, Exercise, WorkoutSession } from '../../types'
 import { getProgramPhase } from '../../utils/progressionEngine'
@@ -284,10 +285,27 @@ export const WorkoutsTab: React.FC<WorkoutsTabProps> = ({
               <div
                 key={ex.id}
                 onClick={() => setSelectedExercise(ex)}
-                className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all flex items-center justify-between gap-3"
+                className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 cursor-pointer transition-all flex items-center justify-between gap-3 group"
               >
-                <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-800/80 bg-slate-950 flex items-center justify-center">
-                  <ExerciseVisual exerciseId={ex.id} className="w-full h-full scale-125" />
+                <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0 border border-slate-800/80 bg-slate-950 relative flex items-center justify-center">
+                  {ex.media?.videoId ? (
+                    <>
+                      <img
+                        src={`https://i.ytimg.com/vi/${ex.media.videoId}/hqdefault.jpg`}
+                        alt={ex.name}
+                        className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform"
+                        loading="lazy"
+                        onError={(e) => {
+                          ;(e.target as HTMLElement).style.display = 'none'
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-slate-950/40 flex items-center justify-center">
+                        <Play className="w-4 h-4 fill-white text-white drop-shadow" />
+                      </div>
+                    </>
+                  ) : (
+                    <ExerciseVisual exerciseId={ex.id} className="w-full h-full scale-125" />
+                  )}
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-1.5 mb-0.5">
@@ -295,8 +313,8 @@ export const WorkoutsTab: React.FC<WorkoutsTabProps> = ({
                       {ex.primaryMuscle}
                     </span>
                     <span className="text-[9px] font-bold text-sky-300 flex items-center gap-0.5 bg-sky-950/60 px-1.5 py-0.5 rounded border border-sky-800/50">
-                      <Activity className="w-2.5 h-2.5 text-sky-400" />
-                      <span>Animated</span>
+                      <Video className="w-2.5 h-2.5 text-sky-400" />
+                      <span>Video Reel</span>
                     </span>
                   </div>
                   <h4 className="text-xs font-bold text-white truncate">{ex.name}</h4>
@@ -305,7 +323,7 @@ export const WorkoutsTab: React.FC<WorkoutsTabProps> = ({
                     {ex.recommendedSets} sets × {ex.recommendedRepsMin}–{ex.recommendedRepsMax} reps • Rest: {ex.recommendedRestSec}s
                   </span>
                 </div>
-                <ChevronRight className="w-4 h-4 text-slate-500 shrink-0" />
+                <ChevronRight className="w-4 h-4 text-slate-500 shrink-0 group-hover:text-sky-400 transition-colors" />
               </div>
             ))}
           </div>

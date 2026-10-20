@@ -13,7 +13,8 @@ import {
   Flame,
   Check,
   Timer as TimerIcon,
-  Activity
+  Activity,
+  Video
 } from 'lucide-react'
 import {
   WorkoutSession,
@@ -59,7 +60,7 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
   const [isRestTimerOpen, setIsRestTimerOpen] = useState<boolean>(false)
   const [restTimerDuration, setRestTimerDuration] = useState<number>(defaultRestSec)
   const [isDetailModalOpen, setIsDetailModalOpen] = useState<boolean>(false)
-  const [detailModalTab, setDetailModalTab] = useState<'guide' | 'animation'>('animation')
+  const [detailModalTab, setDetailModalTab] = useState<'video' | 'guide' | 'cadence'>('video')
   const [isSubstituteModalOpen, setIsSubstituteModalOpen] = useState<boolean>(false)
   const [isSummaryModalOpen, setIsSummaryModalOpen] = useState<boolean>(false)
 
@@ -405,33 +406,33 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
                 <p className="text-xs text-slate-400 mt-0.5">{currentExerciseData.equipment}</p>
               </div>
 
-              <div className="flex gap-1.5">
+              <div className="flex items-center gap-1.5">
                 <button
                   onClick={() => {
-                    setDetailModalTab('animation')
+                    setDetailModalTab('video')
                     setIsDetailModalOpen(true)
                   }}
-                  className="p-2.5 rounded-xl bg-sky-950/80 hover:bg-sky-900 text-sky-400 border border-sky-800/80 flex items-center gap-1 text-xs font-bold"
-                  title="View Repetition Animation Guide"
-                  aria-label="Rep Animation"
+                  className="py-2 px-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-black flex items-center gap-1.5 text-xs shadow-md shadow-sky-500/20 active:scale-95 transition-all"
+                  title="Watch Video How-To Reel"
+                  aria-label="Watch Video Reel"
                 >
-                  <Activity className="w-4 h-4 text-sky-400" />
-                  <span className="hidden sm:inline">Motion</span>
+                  <Video className="w-3.5 h-3.5 fill-slate-950" />
+                  <span>Reel</span>
                 </button>
                 <button
                   onClick={() => {
                     setDetailModalTab('guide')
                     setIsDetailModalOpen(true)
                   }}
-                  className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"
-                  title="Exercise Instructions & Cues"
+                  className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-colors"
+                  title="Exercise Setup & Form Cues"
                   aria-label="Instructions"
                 >
                   <Info className="w-4 h-4 text-sky-400" />
                 </button>
                 <button
                   onClick={() => setIsSubstituteModalOpen(true)}
-                  className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"
+                  className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-colors"
                   title="Substitute Machine (Occupied / Unavailable)"
                   aria-label="Substitute"
                 >
@@ -440,24 +441,62 @@ export const WorkoutMode: React.FC<WorkoutModeProps> = ({
               </div>
             </div>
 
-            {/* Visual Biomechanical Machine Diagram */}
+            {/* Interactive Video Reel / Exercise Preview Card */}
             <div
               onClick={() => {
-                setDetailModalTab('animation')
+                setDetailModalTab('video')
                 setIsDetailModalOpen(true)
               }}
-              className="mt-3 cursor-pointer group"
-              title="Tap for repetition cadence guide"
+              className="mt-3 relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-800/90 cursor-pointer group hover:border-sky-500/50 transition-all shadow-lg"
+              title="Tap to watch real video reel tutorial"
             >
-              <ExerciseVisual exerciseId={currentExerciseData.id} className="w-full h-36" animated={true} />
-              <div className="flex items-center justify-between mt-1 px-1 text-[10px] text-slate-400">
-                <span className="text-sky-400 font-semibold flex items-center gap-1">
-                  <span>Repetition Loop (1-2s Push, 1s Squeeze, 3s Negative)</span>
-                </span>
-                <span className="text-sky-300 font-bold hover:underline flex items-center gap-1">
-                  <Activity className="w-3 h-3 text-sky-400" />
-                  <span>Cadence Guide &rarr;</span>
-                </span>
+              <div className="relative h-32 sm:h-36 w-full overflow-hidden bg-slate-900">
+                {currentExerciseData.media?.videoId ? (
+                  <img
+                    src={`https://i.ytimg.com/vi/${currentExerciseData.media.videoId}/hqdefault.jpg`}
+                    alt={currentExerciseData.name}
+                    className="w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-75 transition-all duration-300"
+                    loading="lazy"
+                    onError={(e) => {
+                      ;(e.target as HTMLElement).style.display = 'none'
+                    }}
+                  />
+                ) : (
+                  <ExerciseVisual exerciseId={currentExerciseData.id} className="w-full h-full" animated={true} />
+                )}
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
+
+                {/* Center Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-11 h-11 rounded-full bg-sky-500/90 text-slate-950 flex items-center justify-center shadow-lg shadow-sky-500/40 group-hover:scale-110 group-hover:bg-sky-400 transition-all">
+                    <Play className="w-5 h-5 fill-slate-950 ml-0.5" />
+                  </div>
+                </div>
+
+                {/* Top Badges */}
+                <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span className="text-[10px] uppercase font-black tracking-wider px-2 py-0.5 rounded-full bg-sky-950/90 text-sky-400 border border-sky-800/80 backdrop-blur-md flex items-center gap-1">
+                    <Video className="w-3 h-3 text-sky-400" />
+                    <span>How-To Reel</span>
+                  </span>
+                </div>
+
+                {/* Bottom Title & Cue */}
+                <div className="absolute bottom-2 inset-x-2.5 flex items-end justify-between">
+                  <div className="max-w-[76%]">
+                    <p className="text-xs font-bold text-white truncate drop-shadow">
+                      {currentExerciseData.media?.videoTitle || currentExerciseData.name}
+                    </p>
+                    <p className="text-[10px] text-sky-300/90 truncate">
+                      {currentExerciseData.media?.videoNote || 'Tap to watch real human form & machine setup'}
+                    </p>
+                  </div>
+                  <span className="text-[10px] text-sky-400 font-bold shrink-0 flex items-center gap-0.5 bg-slate-950/85 px-2 py-0.5 rounded-full border border-slate-800">
+                    <span>Watch</span> &rarr;
+                  </span>
+                </div>
               </div>
             </div>
 

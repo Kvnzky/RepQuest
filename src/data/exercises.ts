@@ -42,9 +42,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     media: {
       diagramType: 'mach-chest-press',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/xUm0AK83Uno',
-      externalUrl: 'https://www.youtube.com/watch?v=xUm0AK83Uno',
-      videoTitle: 'How To Use The Chest Press Machine (Proper Form)',
+      videoId: 'Qu7-ceCvq7w',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/Qu7-ceCvq7w',
+      externalUrl: 'https://www.youtube.com/watch?v=Qu7-ceCvq7w',
+      shortsUrl: 'https://www.youtube.com/shorts/Qu7-ceCvq7w',
+      videoTitle: 'The PERFECT Machine Chest Press',
       videoChannel: 'Anytime Fitness & Form Guide',
       videoNote: 'Focus on 0:25: Adjust seat height so handles line up with mid-chest.',
       isExternal: true
@@ -88,9 +90,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     media: {
       diagramType: 'mach-incline-chest-press',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/8iPEnn-ltC8',
-      externalUrl: 'https://www.youtube.com/watch?v=8iPEnn-ltC8',
-      videoTitle: 'Incline Chest Press Machine Form Demonstration',
+      videoId: 'VesHgJR14E8',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/VesHgJR14E8',
+      externalUrl: 'https://www.youtube.com/watch?v=VesHgJR14E8',
+      shortsUrl: 'https://www.youtube.com/shorts/VesHgJR14E8',
+      videoTitle: 'INCLINE CHEST PRESS | Exercise Form Guide',
       videoChannel: 'Renaissance Periodization',
       videoNote: 'Notice the elbow tuck at 45 degrees to optimize upper chest fiber alignment.',
       isExternal: true
@@ -135,9 +139,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     media: {
       diagramType: 'mach-seated-row',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/GZbfZ033f74',
-      externalUrl: 'https://www.youtube.com/watch?v=GZbfZ033f74',
-      videoTitle: 'How To Seated Cable / Machine Row Correctly',
+      videoId: 'qD1WZ5pSuvk',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/qD1WZ5pSuvk',
+      externalUrl: 'https://www.youtube.com/watch?v=qD1WZ5pSuvk',
+      shortsUrl: 'https://www.youtube.com/shorts/qD1WZ5pSuvk',
+      videoTitle: 'Cable Row Form Tips (DO THIS!)',
       videoChannel: 'ScottHermanFitness',
       videoNote: 'Watch 0:40: Drive elbows behind ribs without swinging torso.',
       isExternal: true
@@ -174,9 +180,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Pad protects lower back; keep torso glued to pad.'],
     media: {
       diagramType: 'mach-chest-supported-row',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/0UBRfiO4zDs',
-      externalUrl: 'https://www.youtube.com/watch?v=0UBRfiO4zDs',
-      videoTitle: 'Chest-Supported Machine Row Technique',
+      videoId: 'FVyVvApcyZY',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/FVyVvApcyZY',
+      externalUrl: 'https://www.youtube.com/watch?v=FVyVvApcyZY',
+      shortsUrl: 'https://www.youtube.com/shorts/FVyVvApcyZY',
+      videoTitle: 'How to Properly do the Hammer Strength Row for Mid Back Growth',
       videoChannel: 'Buff Dudes',
       videoNote: 'Chest support removes lower back stress completely.',
       isExternal: true
@@ -219,9 +227,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Always pull strictly to front of chest.'],
     media: {
       diagramType: 'mach-lat-pulldown',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/CAwf7n6Luuc',
-      externalUrl: 'https://www.youtube.com/watch?v=CAwf7n6Luuc',
-      videoTitle: 'Lat Pulldown Setup & Execution (Stop Making These Mistakes)',
+      videoId: 'bNmvKpJSWKM',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/bNmvKpJSWKM',
+      externalUrl: 'https://www.youtube.com/watch?v=bNmvKpJSWKM',
+      shortsUrl: 'https://www.youtube.com/shorts/bNmvKpJSWKM',
+      videoTitle: '✅ The PERFECT Lat Pulldown (DO THIS!)',
       videoChannel: 'Athlean-X',
       videoNote: 'Watch 1:15: Pulling elbows to hips activates wide lats without swinging.',
       isExternal: true
@@ -259,9 +269,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Maintain neutral spine without violent jerking.'],
     media: {
       diagramType: 'mach-neutral-lat-pulldown',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/7p8_Xw85v2s',
-      externalUrl: 'https://www.youtube.com/watch?v=7p8_Xw85v2s',
-      videoTitle: 'Neutral Grip Lat Pulldown Guide',
+      videoId: 'n9-LFZWeqZ4',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/n9-LFZWeqZ4',
+      externalUrl: 'https://www.youtube.com/watch?v=n9-LFZWeqZ4',
+      shortsUrl: 'https://www.youtube.com/shorts/n9-LFZWeqZ4',
+      videoTitle: 'Pronated grip Lat pulldown vs neutral grip Lat pulldown',
       videoChannel: 'Renaissance Periodization',
       videoNote: 'Neutral palms protect shoulder joints and emphasize mid-back fibers.',
       isExternal: true
@@ -298,9 +310,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Step off slowly; let pad rise completely before releasing grips.'],
     media: {
       diagramType: 'mach-assisted-pullup',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/y3YvBzQ0nU8',
-      externalUrl: 'https://www.youtube.com/watch?v=y3YvBzQ0nU8',
-      videoTitle: 'How To Use The Assisted Pull-Up Machine at Anytime Fitness',
+      videoId: 'CdO5BvP6Ti8',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/CdO5BvP6Ti8',
+      externalUrl: 'https://www.youtube.com/watch?v=CdO5BvP6Ti8',
+      shortsUrl: 'https://www.youtube.com/shorts/CdO5BvP6Ti8',
+      videoTitle: 'Learn Assisted Pull Ups in 13 Seconds ✅',
       videoChannel: 'Anytime Fitness Tutorials',
       videoNote: 'Step-by-step pad safety release and foot mounting technique.',
       isExternal: true
@@ -343,9 +357,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Never press behind neck; always in scapular plane.'],
     media: {
       diagramType: 'mach-shoulder-press',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/WvLMauqrnK8',
-      externalUrl: 'https://www.youtube.com/watch?v=WvLMauqrnK8',
-      videoTitle: 'Seated Machine Shoulder Press Tutorial',
+      videoId: 'Gkk-6q7Rq-s',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/Gkk-6q7Rq-s',
+      externalUrl: 'https://www.youtube.com/watch?v=Gkk-6q7Rq-s',
+      shortsUrl: 'https://www.youtube.com/shorts/Gkk-6q7Rq-s',
+      videoTitle: 'How to Perform the Machine Shoulder Press',
       videoChannel: 'ScottHermanFitness',
       videoNote: 'Watch 0:35: Maintain natural lumbar arch without hyperextension.',
       isExternal: true
@@ -385,9 +401,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Stop at 90-degree shoulder abduction.'],
     media: {
       diagramType: 'mach-lateral-raise',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/3VcKaXpzqRo',
-      externalUrl: 'https://www.youtube.com/watch?v=3VcKaXpzqRo',
-      videoTitle: 'Machine Lateral Raise Form (Capped Deltoids)',
+      videoId: 'Kl3LEzQ5Zqs',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/Kl3LEzQ5Zqs',
+      externalUrl: 'https://www.youtube.com/watch?v=Kl3LEzQ5Zqs',
+      shortsUrl: 'https://www.youtube.com/shorts/Kl3LEzQ5Zqs',
+      videoTitle: 'The Perfect Lateral Raise (DO THIS!)',
       videoChannel: 'Renaissance Periodization',
       videoNote: 'Keep elbows leading the motion, stop at 90-degree parallel height.',
       isExternal: true
@@ -427,9 +445,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Avoid excessive hyper-extension behind the back plane.'],
     media: {
       diagramType: 'mach-reverse-pec-deck',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/y42gL8q5pS8',
-      externalUrl: 'https://www.youtube.com/watch?v=y42gL8q5pS8',
-      videoTitle: 'Reverse Pec Deck Rear Deltoid Fly Setup',
+      videoId: 'O2J8Qs7Wl3U',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/O2J8Qs7Wl3U',
+      externalUrl: 'https://www.youtube.com/watch?v=O2J8Qs7Wl3U',
+      shortsUrl: 'https://www.youtube.com/shorts/O2J8Qs7Wl3U',
+      videoTitle: 'How to do Reverse Flys for Rear Delts on Pec Deck Fly',
       videoChannel: 'Athlean-X',
       videoNote: 'Keep wrists straight and lead with rear delts in wide horizontal arc.',
       isExternal: true
@@ -469,9 +489,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Do not hyperextend elbows violently at bottom of preacher pad.'],
     media: {
       diagramType: 'mach-biceps-curl',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/jaAV-rD45I0',
-      externalUrl: 'https://www.youtube.com/watch?v=jaAV-rD45I0',
-      videoTitle: 'Machine Preacher Bicep Curl Form',
+      videoId: 'S4dDLfp3e8w',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/S4dDLfp3e8w',
+      externalUrl: 'https://www.youtube.com/watch?v=S4dDLfp3e8w',
+      shortsUrl: 'https://www.youtube.com/shorts/S4dDLfp3e8w',
+      videoTitle: 'The PERFECT Machine Preacher Curl',
       videoChannel: 'ScottHermanFitness',
       videoNote: 'Keep triceps and armpits glued to pad; avoid leaning back.',
       isExternal: true
@@ -511,9 +533,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Keep elbows glued to sides; do not let elbows flare wide.'],
     media: {
       diagramType: 'cable-triceps-pushdown',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/2-LAMcpzODU',
-      externalUrl: 'https://www.youtube.com/watch?v=2-LAMcpzODU',
-      videoTitle: 'Tricep Rope Pushdown Form Guide',
+      videoId: 'u36jNfqh8_U',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/u36jNfqh8_U',
+      externalUrl: 'https://www.youtube.com/watch?v=u36jNfqh8_U',
+      shortsUrl: 'https://www.youtube.com/shorts/u36jNfqh8_U',
+      videoTitle: 'Carve your Body with Rope Pushdowns ⚠️ #triceps',
       videoChannel: 'Buff Dudes',
       videoNote: 'Upper arms locked into ribcage; only forearms hinge down.',
       isExternal: true
@@ -562,9 +586,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     ],
     media: {
       diagramType: 'mach-leg-press',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/IZxyjW7MPJQ',
-      externalUrl: 'https://www.youtube.com/watch?v=IZxyjW7MPJQ',
-      videoTitle: 'How to Leg Press Properly (Avoid Knee Lockout)',
+      videoId: 'nDh_BlnLCGc',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/nDh_BlnLCGc',
+      externalUrl: 'https://www.youtube.com/watch?v=nDh_BlnLCGc',
+      shortsUrl: 'https://www.youtube.com/shorts/nDh_BlnLCGc',
+      videoTitle: 'How To Leg Press With Perfect Technique',
       videoChannel: 'Squat University',
       videoNote: 'Watch 0:45: Stop 2 inches before knee lockout to keep constant tension on quads.',
       isExternal: true
@@ -605,9 +631,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Ensure safety catch pins are adjusted to catch carriage if needed.'],
     media: {
       diagramType: 'mach-hack-squat',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/0tn5K9NlCfo',
-      externalUrl: 'https://www.youtube.com/watch?v=0tn5K9NlCfo',
-      videoTitle: 'Hack Squat Technique & Foot Placement',
+      videoId: 'g9i05umL5vc',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/g9i05umL5vc',
+      externalUrl: 'https://www.youtube.com/watch?v=g9i05umL5vc',
+      shortsUrl: 'https://www.youtube.com/shorts/g9i05umL5vc',
+      videoTitle: 'How to Hack Squat #beginner #fitnesstip #howto',
       videoChannel: 'Renaissance Periodization',
       videoNote: 'Keep heels anchored; push knees in line with toes.',
       isExternal: true
@@ -651,9 +679,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Ensure knee is aligned with red pivot marker on machine.'],
     media: {
       diagramType: 'mach-seated-leg-curl',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/ELOCsoDSmrg',
-      externalUrl: 'https://www.youtube.com/watch?v=ELOCsoDSmrg',
-      videoTitle: 'Seated Leg Curl Machine Setup (Hamstring Isolation)',
+      videoId: '_lgE0gPvbik',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/_lgE0gPvbik',
+      externalUrl: 'https://www.youtube.com/watch?v=_lgE0gPvbik',
+      shortsUrl: 'https://www.youtube.com/shorts/_lgE0gPvbik',
+      videoTitle: 'Leg Curl Form Tips (DO THIS!)',
       videoChannel: 'ScottHermanFitness',
       videoNote: 'Lap pad locked firmly prevents hips from lifting, keeping tension strictly on hamstrings.',
       isExternal: true
@@ -695,9 +725,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Avoid heavy 1-5 rep maximum attempts on leg extensions.'],
     media: {
       diagramType: 'mach-leg-extension',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/YyvSfVjQeL0',
-      externalUrl: 'https://www.youtube.com/watch?v=YyvSfVjQeL0',
-      videoTitle: 'Leg Extension Machine Masterclass',
+      videoId: 'iQ92TuvBqRo',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/iQ92TuvBqRo',
+      externalUrl: 'https://www.youtube.com/watch?v=iQ92TuvBqRo',
+      shortsUrl: 'https://www.youtube.com/shorts/iQ92TuvBqRo',
+      videoTitle: '✅ The Perfect Leg Extension',
       videoChannel: 'Renaissance Periodization',
       videoNote: 'Controlled 2-second negative prevents patellar tendon stress.',
       isExternal: true
@@ -738,9 +770,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Keep chin tucked slightly forward toward chest during entire thrust.'],
     media: {
       diagramType: 'mach-glute-drive',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/5X9_10uK5G4',
-      externalUrl: 'https://www.youtube.com/watch?v=5X9_10uK5G4',
-      videoTitle: 'How to Use Glute Drive / Hip Thrust Machine',
+      videoId: '_i6qpcI1Nw4',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/_i6qpcI1Nw4',
+      externalUrl: 'https://www.youtube.com/watch?v=_i6qpcI1Nw4',
+      shortsUrl: 'https://www.youtube.com/shorts/_i6qpcI1Nw4',
+      videoTitle: 'Hip Thrust Tips:',
       videoChannel: 'Anytime Fitness Tutorials',
       videoNote: 'Tuck chin and squeeze glutes hard at top without hyperextending lower back.',
       isExternal: true
@@ -777,9 +811,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Joint friendly; zero spinal compression.'],
     media: {
       diagramType: 'bw-glute-bridge',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/OUgsJ8-Vi0E',
-      externalUrl: 'https://www.youtube.com/watch?v=OUgsJ8-Vi0E',
-      videoTitle: 'Glute Bridge Technique & Muscle Activation',
+      videoId: 'LORVjN2bg5o',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/LORVjN2bg5o',
+      externalUrl: 'https://www.youtube.com/watch?v=LORVjN2bg5o',
+      shortsUrl: 'https://www.youtube.com/shorts/LORVjN2bg5o',
+      videoTitle: 'Glute Bridge Form #glutebridge #formcheck #homeworkouts',
       videoChannel: 'Squat University',
       videoNote: 'Focus on posterior pelvic tilt and direct glute activation.',
       isExternal: true
@@ -820,9 +856,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Keep balls of feet securely centered on edge to prevent slipping.'],
     media: {
       diagramType: 'mach-calf-raise',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/YMmgqO8Jo-k',
-      externalUrl: 'https://www.youtube.com/watch?v=YMmgqO8Jo-k',
-      videoTitle: 'Calf Raise Form: Stop Bouncing & Build Calves',
+      videoId: 'pHm6LFuGGbs',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/pHm6LFuGGbs',
+      externalUrl: 'https://www.youtube.com/watch?v=pHm6LFuGGbs',
+      shortsUrl: 'https://www.youtube.com/shorts/pHm6LFuGGbs',
+      videoTitle: 'Stop Doing Calf Raises Like This! 🛑',
       videoChannel: 'Renaissance Periodization',
       videoNote: '2-second deep pause at bottom stretch eliminates tendon bounce.',
       isExternal: true
@@ -863,9 +901,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Do not yank neck forward.'],
     media: {
       diagramType: 'mach-ab-crunch',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/4m240_uQk1g',
-      externalUrl: 'https://www.youtube.com/watch?v=4m240_uQk1g',
-      videoTitle: 'Abdominal Crunch Machine Technique',
+      videoId: 'mnRhbUB3Fjs',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/mnRhbUB3Fjs',
+      externalUrl: 'https://www.youtube.com/watch?v=mnRhbUB3Fjs',
+      shortsUrl: 'https://www.youtube.com/shorts/mnRhbUB3Fjs',
+      videoTitle: 'AB CRUNCH MACHINE 💪🏼 // Strengthen your abs using this classic machine! #absworkout #planetfitness',
       videoChannel: 'ScottHermanFitness',
       videoNote: 'Curl spine into flexion using abs; do not pull with forearms.',
       isExternal: true
@@ -910,9 +950,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Brace abs as if about to be tapped on stomach.'],
     media: {
       diagramType: 'cable-pallof-press',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/AH_QZLM_0-s',
-      externalUrl: 'https://www.youtube.com/watch?v=AH_QZLM_0-s',
-      videoTitle: 'Cable Pallof Press (Anti-Rotation Core Stability)',
+      videoId: 'YWfioXCZCu0',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/YWfioXCZCu0',
+      externalUrl: 'https://www.youtube.com/watch?v=YWfioXCZCu0',
+      shortsUrl: 'https://www.youtube.com/shorts/YWfioXCZCu0',
+      videoTitle: 'Cable Pallof Press',
       videoChannel: 'Squat University',
       videoNote: 'Resist rotational twist; hold locked arms forward for 2 seconds.',
       isExternal: true
@@ -951,9 +993,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Attach safety emergency clip to clothing.'],
     media: {
       diagramType: 'cardio-treadmill',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/bK3h0n76f7k',
-      externalUrl: 'https://www.youtube.com/watch?v=bK3h0n76f7k',
-      videoTitle: 'Incline Treadmill Walking for Fat Loss & Heart Health',
+      videoId: 'HwXYMPGjlUg',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/HwXYMPGjlUg',
+      externalUrl: 'https://www.youtube.com/watch?v=HwXYMPGjlUg',
+      shortsUrl: 'https://www.youtube.com/shorts/HwXYMPGjlUg',
+      videoTitle: 'How to Walk Correctly on an Incline Treadmill 🔥 | Quick Gym Tip #cardiotips #cardio #treadmill #gym',
       videoChannel: 'Anytime Fitness Cardio Guide',
       videoNote: 'Walk upright with natural arm swing; avoid clinging to front handrails.',
       isExternal: true
@@ -988,9 +1032,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Great zero-impact alternative to treadmill.'],
     media: {
       diagramType: 'cardio-bike',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/z0q6Z9XGk6U',
-      externalUrl: 'https://www.youtube.com/watch?v=z0q6Z9XGk6U',
-      videoTitle: 'Stationary Bike Setup & Cadence Guide',
+      videoId: 'dieOsJlsvpM',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/dieOsJlsvpM',
+      externalUrl: 'https://www.youtube.com/watch?v=dieOsJlsvpM',
+      shortsUrl: 'https://www.youtube.com/shorts/dieOsJlsvpM',
+      videoTitle: 'How to use spin bike for beginners.#indoorcycling #spinclass #spinbike #workouttips',
       videoChannel: 'Anytime Fitness Cardio Guide',
       videoNote: 'Proper seat height ensures knees do not hyperextend or cramp.',
       isExternal: true
@@ -1026,9 +1072,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['No pinching sensations in groin; back off if sharp pinch occurs.'],
     media: {
       diagramType: 'mobility-hips',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/Zk_zQe6f3w8',
-      externalUrl: 'https://www.youtube.com/watch?v=Zk_zQe6f3w8',
-      videoTitle: '90/90 Hip Mobility Drill for Tight Hips',
+      videoId: 'm51AZSXMvEA',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/m51AZSXMvEA',
+      externalUrl: 'https://www.youtube.com/watch?v=m51AZSXMvEA',
+      shortsUrl: 'https://www.youtube.com/shorts/m51AZSXMvEA',
+      videoTitle: '90 90 Hip Switch',
       videoChannel: 'Squat University',
       videoNote: 'Gently hinge forward over front thigh with upright spine.',
       isExternal: true
@@ -1064,9 +1112,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Gentle stretch at back of lower leg, no joint impingement.'],
     media: {
       diagramType: 'mobility-ankles',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/IikP_TEEClk',
-      externalUrl: 'https://www.youtube.com/watch?v=IikP_TEEClk',
-      videoTitle: 'Ankle Mobility Test & Wall Drill',
+      videoId: 'IikP_teeLkI',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/IikP_teeLkI',
+      externalUrl: 'https://www.youtube.com/watch?v=IikP_teeLkI',
+      shortsUrl: 'https://www.youtube.com/shorts/IikP_teeLkI',
+      videoTitle: 'Top 3 Ankle Mobility Exercises [Strong Ankles]',
       videoChannel: 'Squat University',
       videoNote: 'Drive knee straight toward wall keeping heel flat on ground.',
       isExternal: true
@@ -1102,9 +1152,11 @@ export const DEFAULT_EXERCISES: Exercise[] = [
     safetyNotes: ['Promotes shoulder health for pressing machines.'],
     media: {
       diagramType: 'mobility-spine',
-      videoUrl: 'https://www.youtube-nocookie.com/embed/w_UKg_p0p8k',
-      externalUrl: 'https://www.youtube.com/watch?v=w_UKg_p0p8k',
-      videoTitle: 'Thoracic Spine Mobility & Cat-Cow Drill',
+      videoId: 'LIVJZZyZ2qM',
+      videoUrl: 'https://www.youtube-nocookie.com/embed/LIVJZZyZ2qM',
+      externalUrl: 'https://www.youtube.com/watch?v=LIVJZZyZ2qM',
+      shortsUrl: 'https://www.youtube.com/shorts/LIVJZZyZ2qM',
+      videoTitle: 'Cat - Cow Stretch',
       videoChannel: 'Athlean-X',
       videoNote: 'Breathe through the thoracic spine rotation to unlock overhead shoulder mobility.',
       isExternal: true

@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   X,
+  Play,
   CheckCircle,
   AlertTriangle,
   Shield,
@@ -8,10 +9,12 @@ import {
   Wind,
   Layers,
   Activity,
-  WifiOff,
-  ImageIcon
+  Video,
+  ExternalLink,
+  WifiOff
 } from 'lucide-react'
 import { Exercise } from '../../types'
+import { ExerciseReelPlayer } from '../common/ExerciseReelPlayer'
 import { ExerciseVisual } from '../common/ExerciseVisual'
 
 interface ExerciseDetailModalProps {
@@ -19,7 +22,7 @@ interface ExerciseDetailModalProps {
   isOpen: boolean
   onClose: () => void
   onSubstitute?: () => void
-  defaultTab?: 'guide' | 'animation'
+  defaultTab?: 'video' | 'guide' | 'cadence'
 }
 
 export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
@@ -27,9 +30,16 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
   isOpen,
   onClose,
   onSubstitute,
-  defaultTab = 'animation'
+  defaultTab = 'video'
 }) => {
-  const [activeTab, setActiveTab] = useState<'guide' | 'animation'>(defaultTab)
+  const [activeTab, setActiveTab] = useState<'video' | 'guide' | 'cadence'>(defaultTab)
+
+  // Sync activeTab when defaultTab changes or modal reopens
+  useEffect(() => {
+    if (isOpen) {
+      setActiveTab(defaultTab)
+    }
+  }, [isOpen, defaultTab])
 
   if (!isOpen || !exercise) return null
 
@@ -58,18 +68,18 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
           </button>
         </div>
 
-        {/* Tab Switcher: Animated Movement vs Setup Guide */}
-        <div className="px-4 pt-3 pb-2 bg-[#0f172a] border-b border-slate-800/60 flex gap-2">
+        {/* 3-Way Tab Switcher: Video Reel vs Setup Guide vs Tempo Cadence */}
+        <div className="px-4 pt-3 pb-2 bg-[#0f172a] border-b border-slate-800/60 flex gap-1.5">
           <button
-            onClick={() => setActiveTab('animation')}
+            onClick={() => setActiveTab('video')}
             className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
-              activeTab === 'animation'
+              activeTab === 'video'
                 ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20'
                 : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
             }`}
           >
-            <Activity className="w-3.5 h-3.5" />
-            <span>Movement Animation</span>
+            <Video className="w-3.5 h-3.5" />
+            <span>Video Reel</span>
           </button>
 
           <button
@@ -80,58 +90,29 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
                 : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
             }`}
           >
-            <ImageIcon className="w-3.5 h-3.5" />
-            <span>Machine Setup & Form</span>
+            <Layers className="w-3.5 h-3.5" />
+            <span>Setup & Form</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('cadence')}
+            className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+              activeTab === 'cadence'
+                ? 'bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20'
+                : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
+            }`}
+          >
+            <Activity className="w-3.5 h-3.5" />
+            <span>Tempo</span>
           </button>
         </div>
 
         {/* Scrollable Content */}
         <div className="p-5 overflow-y-auto space-y-5 text-sm">
-          {/* TAB 1: ANIMATED MOVEMENT GUIDE (CENTERPIECE) */}
-          {activeTab === 'animation' && (
+          {/* TAB 1: REAL VIDEO REEL (PRIMARY HOW-TO) */}
+          {activeTab === 'video' && (
             <div className="space-y-4">
-              {/* Animated Biomechanical Loop with Speed & Pause Controls */}
-              <div>
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1">
-                    <Activity className="w-3.5 h-3.5 text-sky-400" />
-                    Biomechanical Repetition Cadence
-                  </span>
-                  <span className="text-[10px] text-emerald-400 font-semibold flex items-center gap-1">
-                    <WifiOff className="w-3 h-3" /> 100% Offline
-                  </span>
-                </div>
-                <ExerciseVisual
-                  exerciseId={exercise.id}
-                  className="w-full h-52"
-                  animated={true}
-                  showControls={true}
-                />
-              </div>
-
-              {/* 3-Step Repetition Cadence Guide */}
-              <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-2.5">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">
-                  Repetition Tempo & Muscle Cadence
-                </h4>
-                <div className="grid grid-cols-3 gap-2 text-center">
-                  <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
-                    <span className="text-[10px] text-sky-400 uppercase font-bold block">1. Push / Pull</span>
-                    <span className="text-sm font-black text-white">1–2 sec</span>
-                    <span className="text-[9px] text-slate-500 block">Exhale with power</span>
-                  </div>
-                  <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
-                    <span className="text-[10px] text-amber-400 uppercase font-bold block">2. Squeeze</span>
-                    <span className="text-sm font-black text-white">1 sec</span>
-                    <span className="text-[9px] text-slate-500 block">Hold peak contraction</span>
-                  </div>
-                  <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
-                    <span className="text-[10px] text-emerald-400 uppercase font-bold block">3. Negative</span>
-                    <span className="text-sm font-black text-white">2–3 sec</span>
-                    <span className="text-[9px] text-slate-500 block">Inhale as weight lowers</span>
-                  </div>
-                </div>
-              </div>
+              <ExerciseReelPlayer exercise={exercise} autoPlay={false} showNotes={true} />
 
               {/* Target Prescription Bar */}
               <div className="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-slate-900 border border-slate-800/80 text-center">
@@ -151,29 +132,43 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
                 </div>
               </div>
 
-              {/* Breathing Synchronization */}
-              <div className="p-3.5 rounded-2xl bg-sky-950/30 border border-sky-800/40">
-                <h3 className="text-xs font-bold text-sky-300 flex items-center gap-1.5 mb-1">
-                  <Wind className="w-4 h-4 text-sky-400" />
-                  Breathing Synchronizer
-                </h3>
-                <p className="text-xs text-sky-100/90 leading-relaxed">{exercise.breathingCues}</p>
+              {/* Quick Setup Checklist below video */}
+              <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center justify-between">
+                  <span>Quick Setup Cues</span>
+                  <button
+                    onClick={() => setActiveTab('guide')}
+                    className="text-[11px] text-sky-400 font-semibold hover:underline"
+                  >
+                    View All &rarr;
+                  </button>
+                </h4>
+                <ul className="space-y-1.5">
+                  {exercise.setupInstructions.slice(0, 2).map((step, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
+                      <span className="w-4 h-4 rounded-full bg-slate-800 text-sky-400 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">
+                        {idx + 1}
+                      </span>
+                      <span>{step}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              {/* Quick Link to Setup Steps */}
+              {/* Switch to Detailed Setup Guide */}
               <button
                 onClick={() => setActiveTab('guide')}
-                className="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 border border-slate-700 flex items-center justify-center gap-1.5"
+                className="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 border border-slate-700 flex items-center justify-center gap-1.5 transition-colors"
               >
                 <Layers className="w-4 h-4 text-sky-400" />
-                <span>View Full Machine Setup & Ergonomics &rarr;</span>
+                <span>Read Complete Machine Setup & Ergonomics &rarr;</span>
               </button>
             </div>
           )}
 
           {/* TAB 2: DETAILED SETUP & TECHNIQUE GUIDE */}
           {activeTab === 'guide' && (
-            <>
+            <div className="space-y-4">
               {/* Machine Setup Instructions */}
               <div>
                 <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5 mb-2.5">
@@ -258,7 +253,64 @@ export const ExerciseDetailModal: React.FC<ExerciseDetailModalProps> = ({
                   ))}
                 </div>
               )}
-            </>
+            </div>
+          )}
+
+          {/* TAB 3: REPETITION TEMPO & CADENCE */}
+          {activeTab === 'cadence' && (
+            <div className="space-y-4">
+              {/* Rep Tempo & Muscle Cadence Cards */}
+              <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800 space-y-2.5">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                  Repetition Tempo & Muscle Cadence
+                </h4>
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+                    <span className="text-[10px] text-sky-400 uppercase font-bold block">1. Push / Pull</span>
+                    <span className="text-sm font-black text-white">1–2 sec</span>
+                    <span className="text-[9px] text-slate-500 block">Exhale with power</span>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+                    <span className="text-[10px] text-amber-400 uppercase font-bold block">2. Squeeze</span>
+                    <span className="text-sm font-black text-white">1 sec</span>
+                    <span className="text-[9px] text-slate-500 block">Hold peak contraction</span>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+                    <span className="text-[10px] text-emerald-400 uppercase font-bold block">3. Negative</span>
+                    <span className="text-sm font-black text-white">2–3 sec</span>
+                    <span className="text-[9px] text-slate-500 block">Inhale as weight lowers</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Breathing Synchronization */}
+              <div className="p-3.5 rounded-2xl bg-sky-950/30 border border-sky-800/40">
+                <h3 className="text-xs font-bold text-sky-300 flex items-center gap-1.5 mb-1">
+                  <Wind className="w-4 h-4 text-sky-400" />
+                  Breathing Synchronizer
+                </h3>
+                <p className="text-xs text-sky-100/90 leading-relaxed">{exercise.breathingCues}</p>
+              </div>
+
+              {/* Biomechanical Motion Loop (Offline Fallback) */}
+              <div>
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1">
+                    <Activity className="w-3.5 h-3.5 text-sky-400" />
+                    Biomechanical Diagram
+                  </span>
+                  <span className="text-[10px] text-emerald-400 font-semibold flex items-center gap-1">
+                    <WifiOff className="w-3 h-3" /> 100% Offline
+                  </span>
+                </div>
+                <ExerciseVisual
+                  exerciseId={exercise.id}
+                  className="w-full h-44"
+                  animated={true}
+                  showControls={true}
+                />
+              </div>
+            </div>
           )}
         </div>
 
