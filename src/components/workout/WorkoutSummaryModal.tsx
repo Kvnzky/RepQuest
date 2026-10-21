@@ -21,7 +21,7 @@ export const WorkoutSummaryModal: React.FC<WorkoutSummaryModalProps> = ({
   if (!isOpen) return null
 
   // Calculate statistics
-  const completedExercises = session.exercises.filter(e => !e.skipped)
+  const completedExercises = session.exercises.filter(e => e.completed || (!e.skipped && e.sets.some(s => s.completed)))
   const totalCompletedSets = session.exercises.reduce((acc, e) => {
     return acc + e.sets.filter(s => s.completed && !s.isWarmup).length
   }, 0)
@@ -114,8 +114,11 @@ export const WorkoutSummaryModal: React.FC<WorkoutSummaryModalProps> = ({
                   >
                     <div>
                       <span className="text-xs font-semibold text-slate-200 block">
-                        {e.exerciseId.replace('mach-', '').replace(/-/g, ' ').toUpperCase()}
+                        {e.customExerciseName || e.exerciseId.replace('mach-', '').replace(/-/g, ' ').toUpperCase()}
                       </span>
+                      {e.isCustom && (
+                        <span className="text-[10px] text-purple-400 block">Custom Exercise</span>
+                      )}
                       {e.isSubstituted && (
                         <span className="text-[10px] text-amber-400">Substituted machine</span>
                       )}

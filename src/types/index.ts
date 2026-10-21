@@ -76,6 +76,7 @@ export interface Exercise {
   recommendedRestSec: number
   defaultWeightKg: number
   weightIncrementKg: number
+  durationSeconds?: number
   commonMistakes: string[]
   beginnerModifications: string[]
   safetyNotes: string[]
@@ -123,6 +124,7 @@ export interface LoggedSet {
   targetReps: number
   actualWeightKg: number
   actualReps: number
+  durationSeconds?: number
   effortRatingRpe?: number
   repsInReserve?: number
   completed: boolean
@@ -131,7 +133,18 @@ export interface LoggedSet {
 }
 
 export interface SessionExercise {
+  id?: string
   exerciseId: string
+  customExerciseName?: string
+  customEquipment?: string
+  customCategory?: 'upper' | 'lower' | 'core' | 'cardio' | 'mobility'
+  targetSets?: number
+  targetRepsMin?: number
+  targetRepsMax?: number
+  targetDurationSeconds?: number
+  targetWeightKg?: number
+  targetRestSec?: number
+  isCustom?: boolean
   originalExerciseId?: string
   isSubstituted: boolean
   substitutionReason?: string
@@ -139,6 +152,9 @@ export interface SessionExercise {
   sets: LoggedSet[]
   skipped: boolean
   skipReason?: string
+  completed?: boolean
+  completedAt?: string
+  notes?: string
 }
 
 export type WorkoutSessionStatus = 'in_progress' | 'completed' | 'abandoned'
@@ -151,6 +167,7 @@ export interface WorkoutSession {
   startTime: string // ISO
   endTime?: string // ISO
   durationSeconds: number
+  currentExerciseIndex?: number
   status: WorkoutSessionStatus
   warmUpCompleted: boolean
   exercises: SessionExercise[]
